@@ -2,6 +2,8 @@
 
 This project is about a web application named TrackGenix developed by 
 Radium Rocket students.
+Here is the landing page!
+![alt text](./semana-02/images/Landing-Desktop-SideBar.png)
 
 ## What is it about?
 It is a web application to facilitate the recording of hours worked by each employee in each project and work team.
@@ -18,3 +20,4 @@ Pull request are welcome. For major changes, please open an issue first to discu
 
 ## License
 [MIT](https://choosealicense.com/license/mit/)
+
