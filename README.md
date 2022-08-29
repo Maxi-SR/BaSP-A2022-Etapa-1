@@ -4,11 +4,7 @@ This project is about a web application named TrackGenix developed by
 Radium Rocket students.
 Here is the landing page!
 ______________________________________
-<<<<<<< HEAD
 ![alt text](./week-02/img/Landing-Desktop-SideBar.png)
-=======
-![alt text](./semana-02/images/Landing-Desktop-SideBar.png)
->>>>>>> ba445d1cf72e58198260af84b2476804ca5eaff5
 ______________________________________
 ## Week 1
 
@@ -24,7 +20,8 @@ The Radium Rocket team started to develop the project,this week only the index.h
 ### Need help?
 *Contact us!*
 
-### Contributing 
+### Contributing ￼
+ba445d1cf72e58198260af84b2476804ca5eaff5
 Pull request are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 ### License
