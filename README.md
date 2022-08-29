@@ -4,7 +4,11 @@ This project is about a web application named TrackGenix developed by
 Radium Rocket students.
 Here is the landing page!
 ______________________________________
+<<<<<<< HEAD
 ![alt text](./week-02/img/Landing-Desktop-SideBar.png)
+=======
+![alt text](./semana-02/images/Landing-Desktop-SideBar.png)
+>>>>>>> ba445d1cf72e58198260af84b2476804ca5eaff5
 ______________________________________
 ## Week 1
 
