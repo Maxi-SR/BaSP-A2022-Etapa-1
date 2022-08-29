@@ -21,7 +21,7 @@ The Radium Rocket team started to develop the project,this week only the index.h
 *Contact us!*
 
 ### Contributing ￼
-ba445d1cf72e58198260af84b2476804ca5eaff5
+
 Pull request are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 ### License
