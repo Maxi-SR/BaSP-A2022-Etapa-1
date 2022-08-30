@@ -20,6 +20,7 @@ The Radium Rocket team started to develop the project,this week only the index.h
 ### Need help?
 *Contact us!*
 
+
 ### Contributing ￼
 
 Pull request are welcome. For major changes, please open an issue first to discuss what you would like to change.
@@ -27,3 +28,5 @@ Pull request are welcome. For major changes, please open an issue first to discu
 ### License
 [MIT](https://choosealicense.com/license/mit/)
 
+### Authors
+    -Maximiliano Schmidt
