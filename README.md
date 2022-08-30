@@ -9,8 +9,8 @@ ______________________________________
 ## Week 1
 
 ### What is it about?
-It is a web application to facilitate the recording of hours worked by each employee in each project and work team.
-This project is in full development. We started this project by doing the above landing page, and some more screens that are not yet available.
+This web app facilitate the recording of hours worked by each employee in each project and work team.
+This project is in full development. We started in Figma by doing the above landing page, and some more screens that are not yet available.
 
 
 ## Week 2
