@@ -82,6 +82,7 @@ aside section {
     margin-right: 19px;
 }
 
+
 .main-container-1{
     border-bottom-style: solid ;
     border-bottom-color: #49A37B;
@@ -139,7 +140,7 @@ aside section {
 
 }
 
-.main-container-2 p,h3{
+.main-container-2 p{
     margin-left: 108px;
     margin-bottom: 0px;
     margin-right: 56px;
@@ -228,6 +229,32 @@ textarea{
 
 .main-container-5 h3{
     margin-left: 0px;
+}
+
+#lorem-img-1{
+    margin-top: 20px;
+    float: left;
+    padding-right: 20px;
+}
+
+
+#lorem-img-2{
+    float: right;
+}
+
+
+#lorem-img-2{
+    padding-left: 55px;
+}
+#lorem-p-2{
+    padding-left: 260px;
+    padding-right: 250px;
+    
+}
+
+#lorem-p-3{
+    padding-right: 300px;
+    
 }
 
 #amet-aungue {
@@ -319,12 +346,36 @@ footer section {
     border-top-style: solid;
     border-bottom-style:solid;
     border-color: #49A37B;
-    margin:auto;
+    
 }
 
 .list-container div{
     display: inline-block;
+    width: 33%;
+    margin-left: 0px;
+}
+
+.list-container h3{
+    padding-left:120px
+}
+
+.list-container ol{
+    margin-left: 90px;
 }
 
 
+.footer-container {
+    margin-left: 300px;
+}
 
+.footer-container a{
+    padding-left:25px
+}
+
+.montevideo {
+    padding-left: 80px;
+}
+
+.Copyright{
+    padding-right:100px;
+}
