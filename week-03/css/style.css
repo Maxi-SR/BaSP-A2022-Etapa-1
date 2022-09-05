@@ -34,10 +34,9 @@ header p {
 }
 
 .search input{
-    margin: 44px 64px 35px 33px;
+    margin: 44px 64px 35px 52px;
     width: 348px;
     height: 60px;
-    border-radius: 4px;
     background-color:rgba(38, 40, 98, 1);
     border-color: #49A37B;
     color: white;
@@ -51,7 +50,7 @@ aside {
     height: 100%;
     background-color: rgba(38, 40, 98, 1);
     max-width: 425px;
-    min-width: 425px;   
+    min-width: 425px;      
 }
 
 aside section {
@@ -61,6 +60,7 @@ aside section {
 .container-1 a{
     display: block; /*para que quede uno debajo de otro */
     border-bottom-style: solid;
+    border-bottom-width: 1px;
     border-bottom-color: #49A37B;
     text-decoration: bold;
     text-decoration-line: none;
@@ -85,7 +85,169 @@ aside section {
 .main-container-1{
     border-bottom-style: solid ;
     border-bottom-color: #49A37B;
+    padding-bottom: 50px;
 }
+
+.main-container-1 p{
+    padding-bottom: 50px;
+    text-align: justify;
+}
+
+.main-container-1 h3{
+    
+    width: 400px;
+}
+
+.main-container-1 h2{
+    
+    width: 400px;
+}
+.main-container-1 a{
+    float: left;
+    margin: 0px 0px 15px 20px;
+    color: aliceblue;
+    background-color: #49A37B;
+    width: 156px;
+    height: auto;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Roboto';
+    
+}
+
+.main-container-2 h2 {
+
+    border-bottom-style: solid;
+    border-bottom-color: #49A37B;
+    margin-right: 900px;
+}
+
+.main-container-2{
+    border-bottom-style: solid;
+    border-bottom-color: #49A37B;
+}
+
+.main-container-2 article{
+    display: inline-block;
+    width: 49%;
+}
+
+.main-container-2 img{
+
+    float:left;
+    margin-top: 50px;
+
+}
+
+.main-container-2 p,h3{
+    margin-left: 108px;
+    margin-bottom: 0px;
+    margin-right: 56px;
+}
+
+.main-container-3 div{
+    display: inline-block;
+    width: 224px;
+    height: 168px;
+    background-color: white;
+    color: #373867;
+    border-radius: 20px;
+    margin-inline: 10px;
+    
+}
+
+.main-container-3 {
+    border-bottom-style: solid;
+    border-bottom-color:#49A37B ;
+}
+.main-container-3 h2{
+    border-bottom-style: solid;
+    border-bottom-color:#49A37B ;
+    margin-right: 720px;
+}
+
+
+.main-container-3 h3{
+    margin-left: 0px;
+    font-size: 17px;
+    font-family: 'Roboto';
+}
+
+.main-container-3 img {
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+
+}
+
+.main-container-3{
+    font-size: 12px;
+}
+
+
+.main-container-4 div input{
+    display: inline-block;
+    width: 49%;
+    background-color: #373867;
+    color: white;
+    height: 37px;
+    margin-bottom: 10px;
+}
+
+.main-container-4 select{
+    width: 100%;
+    background-color: #373867;
+    color: white;
+    height: 37px;
+    margin-bottom: 10px;
+}
+
+.main-container-4 {
+    border-bottom-style: solid;
+    border-bottom-color:#49A37B ;
+}
+
+textarea{
+    width: 100%;
+    resize: none;
+    background-color: #373867;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.main-container-5 h3{
+    margin-left: 0px;
+}
+
+#amet-aungue {
+    border-left-style: solid;
+    border-left-color: #49A37B;
+    padding-left:20px;
+    font-size: 12px;
+    font-style: italic;
+}
+#submit-btn{
+    background-color: #49A37B;
+    color: white;
+    border-style: none;
+    height: 34px;
+    width: 64px;
+}
+
+#reset-btn{
+    background-color: rgba(241, 51, 18, 1);
+    color: white;
+    border-style: none;
+    height: 34px;
+    width:64px
+}
+
+#principal-img {
+    float: right;
+    margin: 0px 0px 0px 100px;
+}
+
 
 .contact-container h3{
     border-bottom-style: solid;
@@ -95,14 +257,34 @@ aside section {
 }
 .contact-container p{
     font-size: 15px;
-}
-.contact-container a{
-    display: list-item;
-    padding-top: 70px;
-    color: white;
-    text-decoration-line: none;
+    margin-bottom: 0px;
+    
 }
 
+.contact-container a{
+    list-style: none;
+    display: list-item;
+    padding-top: 30px;
+    color: white;
+    text-decoration-line: none;  
+    padding-bottom: 20px;
+}
+
+.contact-container img {
+    padding-right: 30px
+}
+
+#address-icon {
+    border-bottom-style: solid;
+    border-bottom-color: #49A37B;
+    border-bottom-width: 1px;
+}
+
+#email-icon {
+    border-bottom-style: solid;
+    border-bottom-color: #49A37B;
+    border-bottom-width: 1px;
+}
 main {
     position: -webkit-sticky;
     width: 70%;
@@ -133,3 +315,6 @@ footer section {
 .list-container div{
     display: inline-block;
 }
+
+
+
