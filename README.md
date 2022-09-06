@@ -17,6 +17,12 @@ This project is in full development. We started in Figma by doing the above land
 
 The Radium Rocket team started to develop the project,this week only the index.html was made, but as the weeks go by the project will grow!
 
+
+## Week 3
+
+This week we are dedicated to giving the style made in figma in week 1.
+We only use css to do that.
+
 ### Need help?
 *Contact us!*
 
