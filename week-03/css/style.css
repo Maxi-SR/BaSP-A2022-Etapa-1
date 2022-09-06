@@ -6,27 +6,42 @@ html,body {
     font-family: "Roboto";
 }
 
+/*NOTA: los selectores de los tags semánticos quedaron 
+con su nombre(body,header,footer,main,aside)
+Se le aplicó id y class a lo que va dentro de ellos*/
+
+/*---------------TODO DENTRO DE HEADER----------------*/
+
 header {
-    width: 70%;
+    width: 64%;
     float:right;
     border-bottom-style: solid;
     border-bottom-color: #49A37B;
+    margin-right: 100px;
 }
+
+
 
 /*para que quede el p al lado de h1*/
 /*------------------------------------*/
-header h1{
+#principal-title{
     margin-left: 20px;
     display: inline-block;
     margin-top: 84px;
 }
 
-header p {
+#subtitle-right{
     display: inline-block;
     padding-left: 10px;
 }
 /*-----------------------------------*/
 
+/*--------------HASTA ACA VA DEL HEADER----------------*/
+
+
+/*-------------------ACA EMPIEZA EL SIDEBAR------------*/
+
+/*Aca empieza la parte de la búsqueda*/
 .search{
     background-color: #373867;
     height: 159px;
@@ -34,7 +49,7 @@ header p {
 }
 
 .search input{
-    margin: 44px 64px 35px 52px;
+    margin: 64px 33px 35px 44px;
     width: 348px;
     height: 60px;
     background-color:rgba(38, 40, 98, 1);
@@ -42,10 +57,13 @@ header p {
     color: white;
     max-width: 348px;
     max-height: 60px;
+    border-radius: 5px;
+    font-family: 'Roboto';
 }
+/*Acá termina la parte de la búsqueda*/
 
 aside {
-    position:fixed;
+    position: fixed;
     width: 30%;
     height: 100%;
     background-color: rgba(38, 40, 98, 1);
@@ -53,39 +71,127 @@ aside {
     min-width: 425px;      
 }
 
-aside section {
-    padding-top: 10 px;
-}
 
-.container-1 a{
+.container-1-aside a{
     display: block; /*para que quede uno debajo de otro */
     border-bottom-style: solid;
     border-bottom-width: 1px;
     border-bottom-color: #49A37B;
-    text-decoration: bold;
+    text-decoration: normal;
     text-decoration-line: none;
-    padding-top: 70px;
+    /* padding-top: 70px; */
     color:white;
-    margin-left: 52px;
+    margin-left: 52px; 
     margin-right: 19px;
     font-family: 'Roboto';
     font-size: 15px;
+}   
+
+#home{
+    padding-top: 49px;
 }
 
-.search {
-    margin-top: 0px;
+#sign-in{
+    padding-top: 69px;
 }
 
-.contact-container{
+#login{
+    padding-top:73px;
+}
+
+.contact-container-aside{
     margin-left: 52px;
     color: white;
     margin-right: 19px;
+    margin-top: 52px;
 }
 
+#get-in-touch{
+    border-bottom-style: solid;
+    border-bottom-color: #49A37B;
+    font-size: 20px;
+    margin-top: 52px;
+}
+
+
+.contact-container-aside p{
+    font-size: 12px;
+    padding-top: 9px;
+    font-weight: 400;
+    line-height: 14.06px;
+    
+}
+
+#address{
+    border-bottom-style: solid;
+    border-bottom-color: #49A37B;
+    border-bottom-width: 1px;
+    
+}
+
+#address img{
+    width: 31px;
+    height: 39px;
+}
+
+#email{
+    padding-top: 24.11px;
+    padding-bottom: 18.16px;
+    border-bottom-style: solid;
+    border-bottom-color: #49A37B;
+    border-bottom-width: 1px;
+}
+
+#email img{
+    width: 30.17px;
+    height: 28.29px;
+}
+
+#phone{
+    padding-top: 27.44px;
+
+}
+
+#phone img{
+    width:28.28px;
+    height:32.4px;
+}
+
+.contact-container-aside a{
+    list-style: none;
+    display: list-item;
+    padding-top: 30px;
+    color: white;
+    text-decoration-line: none;  
+    padding-bottom: 20px;
+    font-family: 'Roboto';
+    font-size: 14px;
+    font-style: normal;
+}
+
+.contact-container-aside img {
+    padding-right: 30px
+}
+/*------------------ACA TERMINA EL SIDEBAR----------------*/
+
+/*------------------EMPIEZA EL MAIN-------------------*/
+main {
+    width: 64%;
+    float:right;
+    margin-right: 118px;
+    max-width: 1087px;
+}
+
+main section {
+    padding:20px
+}
+/*------------------Empieza primera sección-------------*/
 .main-container-1{
     border-bottom-style: solid ;
     border-bottom-color: #49A37B;
     padding-bottom: 50px;
+    margin-left: 25px;
+    
 }
 
 .main-container-1 p{
@@ -114,18 +220,24 @@ aside section {
     font-family: 'Roboto';
     
 }
+/*--------------------Termina primera seccion----------*/
+
+/*--------------------Empieza segunda seccion----------*/
+.main-container-2{
+    border-bottom-style: solid;
+    border-bottom-color: #49A37B;
+    margin-left: 25px;
+    padding-bottom: 50px;
+}
 
 .main-container-2 h2 {
 
     border-bottom-style: solid;
     border-bottom-color: #49A37B;
-    margin-right: 900px;
+    margin-right: 780px;
+    padding-bottom: 10px;
 }
 
-.main-container-2{
-    border-bottom-style: solid;
-    border-bottom-color: #49A37B;
-}
 
 .main-container-2 article{
     display: inline-block;
@@ -136,22 +248,49 @@ aside section {
 
     float:left;
     margin-top: 50px;
-
+    
+    
 }
 
-.main-container-2 p,h3{
-    margin-left: 108px;
+#function-1-title {
+    margin-left: 120px;
+}
+
+#function-2-title {
+    margin-left: 120px;
+}
+
+#function-3-title {
+    margin-left: 120px;
+}
+
+#function-4-title {
+    margin-left: 120px;
+}
+
+.main-container-2 p{
+    margin-left: 120px;
     margin-bottom: 0px;
     margin-right: 56px;
 }
+/*---------------------Termina segunda seccion------------*/
+
+/*---------------------Empieza tercer seccion-------------*/
+.main-container-3 {
+    border-bottom-style: solid;
+    border-bottom-color:#49A37B ;
+    margin-left: 25px;
+}
+
 
 .main-container-3 div{
     display: inline-block;
-    width:19%;
+    width:22%;
     background-color: white;
     color: #373867;
     border-radius: 20px;
     margin-inline: 10px;
+    margin-bottom: 40px;
 }
 
 .main-container-3 div p{
@@ -166,14 +305,12 @@ aside section {
     
 }
 
-.main-container-3 {
-    border-bottom-style: solid;
-    border-bottom-color:#49A37B ;
-}
 .main-container-3 h2{
     border-bottom-style: solid;
     border-bottom-color:#49A37B ;
-    margin-right: 720px;
+    margin-right: 625px;
+    padding-bottom: 10px;
+    margin-bottom: 40px;
 }
 
 
@@ -187,17 +324,38 @@ aside section {
     float: right;
     margin-top: 10px;
     margin-right: 10px;
-
+    
 }
 
 .main-container-3{
     font-size: 12px;
 }
 
+/*---------------------Termina tercer sección-------------*/
+
+.main-container-4 {
+    border-bottom-style: solid;
+    border-bottom-color:#49A37B ;
+    margin-left: 25px;
+}
+
+#contact-us{
+
+    border-bottom-style: solid;
+    border-bottom-color:#49A37B ;
+    margin-right: 750px;
+    padding-bottom: 10px;
+
+}
+
+.main-container-4 div{
+    width: 105%;
+    margin-bottom: 10px;
+}
 
 .main-container-4 div input{
     display: inline-block;
-    width: 49%;
+    width: 48%;
     background-color: #373867;
     color: white;
     height: 37px;
@@ -205,38 +363,22 @@ aside section {
 }
 
 .main-container-4 select{
-    width: 100%;
+    width: 103%;
     background-color: #373867;
     color: white;
     height: 37px;
-    margin-bottom: 10px;
-}
-
-.main-container-4 {
-    border-bottom-style: solid;
-    border-bottom-color:#49A37B ;
+    margin-bottom: 20px;
 }
 
 textarea{
-    width: 100%;
+    width: 102%;
     resize: none;
     background-color: #373867;
     color: white;
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
-.main-container-5 h3{
-    margin-left: 0px;
-}
-
-#amet-aungue {
-    border-left-style: solid;
-    border-left-color: #49A37B;
-    padding-left:20px;
-    font-size: 12px;
-    font-style: italic;
-}
 #submit-btn{
     background-color: #49A37B;
     color: white;
@@ -253,58 +395,63 @@ textarea{
     width:64px
 }
 
+/*----------------------Empieza about us------------------*/
+.main-container-5{
+    border-bottom-style: solid;
+    border-bottom-color:#49A37B ;
+    margin-left: 25px;
+}
+
+.main-container-5 h3{
+    margin-left: 0px;
+}
+
+#lorem-img-1{
+    margin-top: 20px;
+    float: left;
+    border:5px solid white;
+    border-radius: 69px;
+}
+
+
+#lorem-img-2{
+    float: right;
+    border:5px solid white;
+    border-radius: 69px;
+}
+
+#lorem-p-2{
+    padding-left: 300px;
+    padding-right: 300px;
+    font-size: 12px;
+}
+
+#lorem-p-1{
+    margin-left: 300px;
+    font-size: 12px;
+    
+}
+
+#lorem-p-3{
+    padding-right: 300px;
+    font-size: 12px;
+    
+}
+
+#amet-aungue {
+    border-left-style: solid;
+    border-left-color: #49A37B;
+    padding-left:20px;
+    font-size: 12px;
+    font-style: italic;
+}
+
+
 #principal-img {
     float: right;
     margin: 0px 0px 0px 100px;
 }
-
-
-.contact-container h3{
-    border-bottom-style: solid;
-    border-bottom-color: #49A37B;
-    font-size: 20px;
-    margin-top: 52px;
-}
-.contact-container p{
-    font-size: 15px;
-    margin-bottom: 0px;
-    
-}
-
-.contact-container a{
-    list-style: none;
-    display: list-item;
-    padding-top: 30px;
-    color: white;
-    text-decoration-line: none;  
-    padding-bottom: 20px;
-}
-
-.contact-container img {
-    padding-right: 30px
-}
-
-#address-icon {
-    border-bottom-style: solid;
-    border-bottom-color: #49A37B;
-    border-bottom-width: 1px;
-}
-
-#email-icon {
-    border-bottom-style: solid;
-    border-bottom-color: #49A37B;
-    border-bottom-width: 1px;
-}
-main {
-    position: -webkit-sticky;
-    width: 70%;
-    float:right;
-    margin: 10px 0px 10px 100px;
-    max-width: 1087px;
-}
-main section {
-    padding:20px
-}
+/*------------ACA EMPIEZA EL FOOTER----------------*/
 
 footer {
     float: right;
@@ -316,15 +463,38 @@ footer section {
 }
 
 .list-container{
-    border-top-style: solid;
     border-bottom-style:solid;
     border-color: #49A37B;
-    margin:auto;
+    margin-left: 25px;
 }
 
 .list-container div{
     display: inline-block;
+    width: 33%;
+    margin-left: 0px;
+}
+
+.list-container h3{
+    padding-left:120px
+}
+
+.list-container ol{
+    margin-left: 90px;
 }
 
 
+.footer-container {
+    margin-left: 300px;
+}
 
+.footer-container a{
+    padding-left:25px
+}
+
+.montevideo {
+    padding-left: 80px;
+}
+
+.Copyright{
+    padding-right:100px;
+}
