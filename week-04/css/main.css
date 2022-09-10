@@ -1,0 +1,36 @@
+main{
+   width: 100%;
+}
+
+.main-container{
+    padding-top: 10px;
+    border-bottom-style: solid;
+    border-bottom-color: aquamarine;
+    flex-wrap: wrap;
+}
+
+.main-container > img {
+    max-width: 100%
+}
+
+.main-container h2{
+    font-size: 30px;
+}
+
+.main-container h3{
+    font-size: 20px;
+}
+
+.why-track-divs{
+    display: flex;
+    background-color:white;
+    color:#373867;
+    border-radius:20px;
+    align-items: center;
+    margin: 20px;
+}
+
+
+.why-track-divs img {
+    
+}
