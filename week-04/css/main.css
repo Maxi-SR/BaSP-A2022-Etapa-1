@@ -30,6 +30,18 @@ main{
     border-bottom-color: #49A37B;
 }
 
+#learn-more-btn{
+    color:aliceblue;
+    background-color:#49A37B;
+    width:167px;
+    text-decoration-line:none;
+    text-align:center;
+    border-radius:4px;
+    text-transform:uppercase;
+    padding:14px 36px;
+    font-size:15px;
+    font-weight:900;
+}
 .why-track-divs{
     background-color:white;
     color:#373867;
@@ -74,6 +86,27 @@ form{
 #sbm-rst input{
     margin-inline: 10px;
     flex: 0 0 80px;
+}
+
+#submit-btn{
+    background-color:#49A37B;
+    color:white;
+    border-style:none;
+    height:34px;
+    width:87px;
+    border-radius:4px;
+    margin-top: 10px;    
+}
+
+
+#reset-btn{
+    background-color:rgba(241, 51, 18, 1);
+    color:white;
+    border-style:none;
+    height:34px;
+    width:87px;
+    border-radius:4px;
+    margin-top: 10px;
 }
 
 .section-container-3{
@@ -130,40 +163,6 @@ form{
 }
 
 
-#submit-btn{
-    background-color:#49A37B;
-    color:white;
-    border-style:none;
-    height:34px;
-    width:87px;
-    border-radius:4px;
-    margin-top: 10px;    
-}
-
-
-#reset-btn{
-    background-color:rgba(241, 51, 18, 1);
-    color:white;
-    border-style:none;
-    height:34px;
-    width:87px;
-    border-radius:4px;
-    margin-top: 10px;
-}
-
-#learn-more-btn{
-    color:aliceblue;
-    background-color:#49A37B;
-    width:167px;
-    text-decoration-line:none;
-    text-align:center;
-    border-radius:4px;
-    text-transform:uppercase;
-    padding:14px 36px;
-    font-size:15px;
-    font-weight:900;
-}
-
 #amet-aungue{
     border-left-style: solid;
     border-left-color: rgba(255, 255, 255, 1);
@@ -171,6 +170,7 @@ form{
 }
 
 @media screen and (min-width:480px){
+
     .section-container-1{
         display: flex;
         flex-wrap: wrap;                  
@@ -186,6 +186,60 @@ form{
     }
     article img{
         margin-right: 20px;
+    }
+
+    .section-container form{
+        display: flex;
+        flex-direction: column;
+        flex: 100%;
+    }
+
+    .section-container form div:first-child{
+        justify-items: space-between;
+        
+        
+    }
+
+    .list-container{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    footer{
+        justify-content: center;
+    }
+
+    .lorem-p-img-1{
+        display: flex;
+    }
+
+    .lorem-p-img-2{
+        flex-direction: row-reverse;
+        display: flex;
+        align-items: center;
+    }
+
+    .lorem-p-img-2 img{
+        align-self: center
+    }
+    #lorem-p-3{
+        display: none;
+    }
+
+}
+
+@media screen and (min-width:480px){
+    .lorem{
+        display:none;
+    }
+    
+}
+
+@media only screen and (max-width:480px) {
+    
+    /*por ahora pongo esto aca*/
+    .lorem-2{
+        display: none;
     }
 
 }
