@@ -1,7 +1,23 @@
-@media only screen and (max-width:768px){
-    aside{
+@media only screen and (max-width:768px) {
+    aside {
         display: none;
-    };
-    
+    }
+
+    ;
+
 
 }
+
+
+@media only screen and (max-width:768px) {
+    
+    /*por ahora pongo esto aca*/
+    .lorem-container-no-mobile {
+        display: none;
+    }
+
+}
+
+
+
+
