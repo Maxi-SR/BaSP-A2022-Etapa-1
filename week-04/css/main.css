@@ -1,8 +1,12 @@
 main{
     flex-direction: column;
     display: flex;
-    margin: 0px;
+    margin: 48px;
+    border-top-style: solid;
+    border-top-color:rgba(73, 163, 123, 1);
+    align-items: center;
 }
+
 
 .section-container > img {
     max-width: 100%
@@ -25,11 +29,6 @@ main{
     font-size: 30px;
 }
 
-.section-container-1 > h2{
-    border-bottom-style: solid;
-    border-bottom-color: #49A37B;
-}
-
 #learn-more-btn{
     color:aliceblue;
     background-color:#49A37B;
@@ -42,6 +41,11 @@ main{
     font-size:15px;
     font-weight:900;
 }
+.section-container-1 > h2{
+    border-bottom-style: solid;
+    border-bottom-color: #49A37B;
+}
+
 .why-track-divs{
     background-color:white;
     color:#373867;
@@ -74,8 +78,7 @@ main{
 }
 
 form{
-    display: flex;
-    flex-direction: column;
+
 }
 
 #sbm-rst{
@@ -179,18 +182,11 @@ form{
     .why-track-divs{
         flex: 45%;
     }
-    
-    article{
-        display: flex;
-        align-items: center;
-    }
-    article img{
-        margin-right: 20px;
-    }
+
 
     .section-container form{
         display: flex;
-        flex-direction: column;
+        flex-flow: column;
         flex: 100%;
     }
 
@@ -202,7 +198,8 @@ form{
 
     .list-container{
         display: flex;
-        justify-content: space-around;
+        flex-direction:row;
+        align-content: space-between;
     }
 
     footer{
@@ -232,6 +229,17 @@ form{
     .lorem{
         display:none;
     }
+
+    article{
+        flex:50%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    article img{
+        align-self: center;
+    }
     
 }
 
@@ -242,4 +250,36 @@ form{
         display: none;
     }
 
+}
+
+@media screen and (min-width:1024px){
+
+    .section-container-1{
+        display: flex;
+        flex-wrap: nowrap;
+        height: 400px;
+    }
+
+    .article-containers{
+        display:flex;
+        flex-flow:row;
+        justify-content:center;
+        flex-wrap:wrap;
+    }
+
+    
+
+    article{
+            flex:50%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    
+    article img{
+        align-self: center;
+    }
+
+    
+    
 }
