@@ -7,15 +7,11 @@ main{
     margin: 40px;
 }
 
-.learn-data{
-    display: flex;
-    flex-direction: row-reverse;
-}
-
 
 .section-container > img {
-    max-width: 100%
+    max-width: 100%;
 }
+
 
 .section-container h3{
     font-size: 20px;
@@ -255,7 +251,15 @@ form{
 
 }
 
+
 @media screen and (min-width:1024px){
+
+
+    main section:first-child{
+        display: flex;
+        flex-direction: row-reverse;
+     }
+
     .why-divs-first-pair{
         display: flex;
         flex-direction: row;
@@ -285,7 +289,6 @@ form{
     article img{
         align-self: center;
     }
-
     
     
 }

@@ -23,6 +23,10 @@ The Radium Rocket team started to develop the project,this week only the index.h
 This week we are dedicated to giving the style made in figma in week 1.
 We only use css to do that.
 
+## Week 4
+
+We introduce responsive design using flexbox and media queries.
+
 ### Need help?
 *Contact us!*
 
