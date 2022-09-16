@@ -27,6 +27,9 @@ We only use css to do that.
 
 We introduce responsive design using flexbox and media queries.
 
+## Week 5
+We started with javascript, especifically doing some excercises.
+
 ### Need help?
 *Contact us!*
 
