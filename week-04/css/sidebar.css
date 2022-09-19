@@ -69,18 +69,6 @@ aside{
     
 }
 
-@media screen and (min-width:1024px){
-    body{
-        display: flex;
-    }
-    
-    .rest-container{
-        margin-left: 30%;
-    }
-
-    
-
-}
 
 
 
