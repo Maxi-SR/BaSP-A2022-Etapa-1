@@ -5,7 +5,7 @@ main {
 }
 
 #first-section-inside-main-img {
-    max-width: 100%;
+    max-width: 325px;
     padding-top: 10px;
 }
 
@@ -29,67 +29,133 @@ main {
     text-align:center;
     border-radius:4px;
     text-transform:uppercase;
-    padding:14px 36px;
+    padding:0.8rem 1.6rem;
     margin: 20px 0px 10px;
-    font-size:15px;
+    font-size:0.8rem;
     font-weight:900;
 }
 
 section {
-    border-bottom-style: solid;
-    border-bottom-color:rgba(73, 163, 123, 1);
+    border-bottom: 4px solid #49a37b;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     padding-bottom: 10px;
 }
 
+
+
 #functions-title {
-    font-size: 30px;
+    font-weight: 700;
+    font-size: 1.6rem;
+    border-bottom: 4px solid #49a37b;
+    margin: 10px 0px 20px;
+    align-self: flex-start;
 }
 
-article img {
-    margin: 40px 0px 10px;
+.functions-titles {
+    font-size: 1.2rem;
 }
 
-article h3 {
-    font-size: 20px;
-    margin:0px 0px 10px;
+.functions-text {
+    margin-bottom: 2rem;
+    padding: 0.2rem;
+}
+
+.functions-text p {
+    font-size: 1rem;
 }
 
 #why-track-time-title {
-    font-size: 30px;
+    font-weight: 700;
+    font-size: 1.6rem;
     margin: 20px 0px 10px;
+    border-bottom: 4px solid #49a37b;
+    padding: 10px;
+    align-self: flex-start;
+}
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .why-track-divs {
     background-color:white;
     color:#373867;
-    border-radius:20px;
+    border-radius:17px;
     display: flex;
-    align-items: center;
-    margin: 10px;
-}
-
-.why-track-divs .text-only {
     flex-direction: column;
-    padding: 10px;
+    justify-content: space-around;
+    margin: 20px;
 }
 
-.why-track-divs img {
-    margin-top: 24px;
-    margin-right: 27px;
-    order: 1;
-    align-self: flex-start;
+.card-title-and-img {
+    display: flex;
+    justify-content: space-between;
 }
 
-.why-track-divs h3 {
-    align-self: flex-start;
-    margin-left: 23px;
+.card-title-and-img h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-left: 20px;
+    margin-top: 30px;
 }
 
 .why-track-divs p {
-    align-self: flex-end;
-    margin-left: 23px;
+    width: 85%;
+    text-align: justify;
+    font-size: 0.75rem;
+    padding-bottom: 0.8rem;
+    margin-left: 15px;
+}
+
+.why-track-divs img {
+    margin:1.2rem;
+    order: 1;
+    align-self: center;
+    padding-right: 10px;
+}
+
+
+#contact-us {
+    font-weight: 700;
+    font-size: 1.6rem;
+    border-bottom: 4px solid #49a37b;
+    padding: 10px;
+    align-self: flex-start;
+}
+
+.inputs-text-email {
+    display: flex;
+    margin: 0px;
+    align-content: space-between;
+}
+
+form div input {
+    width: 100%;
+    margin: 10px 0px 10px;
+    background-color: #373867;
+    color:rgba(255, 255, 255, 1);
+    border-radius: 4px;
+    height: 37px;
+}
+
+form div select {
+    width: 100%;
+    background-color: #373867;
+    color: rgba(255, 255, 255, 1);
+    border-radius: 4px;
+    height: 37px;
+    margin: 10px 0px 20px;
+}
+
+form div textarea {
+    width:100%;
+    background-color: #373867;
+    color: rgba(255, 255, 255, 1);
+    border-radius: 4px;
 }
 
 #submit-and-reset-button {
@@ -122,37 +188,12 @@ article h3 {
     margin-top: 10px;
 }
 
-#contact-us {
-    font-size: 30px;
-}
-
-form div input {
-    width: 100%;
-    margin: 10px 0px 10px;
-    background-color: #373867;
-    color:rgba(255, 255, 255, 1);
-    border-radius: 4px;
-    height: 37px;
-}
-
-form div select {
-    width: 100%;
-    background-color: #373867;
-    color: rgba(255, 255, 255, 1);
-    border-radius: 4px;
-    height: 37px;
-    margin: 10px 0px 20px;
-}
-
-form div textarea {
-    width:100%;
-    background-color: #373867;
-    color: rgba(255, 255, 255, 1);
-    border-radius: 4px;
-}
-
 #about-us {
-    font-size: 30px;
+    border-bottom: 4px solid #49a37b;
+    padding: 10px;
+    font-weight: 700;
+    font-size: 1.6rem;
+    align-self: flex-start;
 }
 
 .lorem-mobile-title {
@@ -197,29 +238,24 @@ form div textarea {
 
 .footer-container {
     display: flex;
-    flex-direction: row;
     justify-content: center;
 }
 
 @media screen and (min-width:480px){
 
-    .section-container-1{
-        display:flex;
-        align-content:center;
-        align-items: stretch;
+    .why-track-divs {
+        width: 40%;
     }
 
-    .section-container form{
+    form div input {
+        width: 45%;
+    }
+
+    .inputs-name-email {
         display: flex;
-        flex-flow: column;
-        flex: 100%;
+        justify-content: space-between;
     }
 
-    .section-container form div:first-child{
-        justify-items: space-between;
-        
-        
-    }
 
     .list-container{
         display: flex;
@@ -257,16 +293,16 @@ form div textarea {
     }
 
     article{
-        flex:50%;
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        justify-content: center;
+        align-items:flex-start;
     }
 
     article img{
         align-self: center;
+        margin-right: 30px;
     }
-    
+
 }
 
 @media only screen and (max-width:480px) {
@@ -279,7 +315,7 @@ form div textarea {
 }
 
 
-@media screen and (min-width:1024px){
+/* @media screen and (min-width:1024px){
 
 
     main section:first-child{
@@ -318,4 +354,4 @@ form div textarea {
     }
     
     
-}
+} */
