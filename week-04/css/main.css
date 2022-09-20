@@ -38,7 +38,7 @@ main {
 section {
     border-bottom: 4px solid #49a37b;
     display: flex;
-    flex-direction: column;
+    
     flex-wrap: wrap;
     padding-bottom: 10px;
 }
@@ -94,13 +94,14 @@ section {
 .card-title-and-img {
     display: flex;
     justify-content: space-between;
+    
 }
 
 .card-title-and-img h3 {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     font-weight: 700;
-    margin-left: 20px;
     margin-top: 30px;
+    margin-left:1.2rem;
 }
 
 .why-track-divs p {
@@ -108,14 +109,15 @@ section {
     text-align: justify;
     font-size: 0.75rem;
     padding-bottom: 0.8rem;
-    margin-left: 15px;
+    margin-left: 1.2rem;
+    padding-right: 10px;
 }
 
 .why-track-divs img {
-    margin:1.2rem;
-    order: 1;
     align-self: center;
-    padding-right: 10px;
+    margin-right:1.3rem;
+    margin-top: 1.3rem;
+    margin-bottom:1.1rem;
 }
 
 
@@ -196,9 +198,36 @@ form div textarea {
     align-self: flex-start;
 }
 
-.lorem-mobile-title {
+
+.lorem-2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.lorem-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.lorem-container p {
+    margin-left: 20px;
+    margin-right: 20px;
+    align-self: center;
+}
+
+.lorem-2 img {
+    align-self: center;
+    border: 4px solid white;
+    border-radius: 60px;
+    max-width: 200px;
+    max-height: 150px;
+    margin-bottom: 10px;
+}
+
+.lorem-title {
     font-size:20px;
-    padding: 10px 0px 10px;
+    padding: 20px 10px 20px;
 }
 
 .lorem-mobile-container {
@@ -223,7 +252,8 @@ form div textarea {
 .product-company-support {
     display: flex;
     flex-direction: column;
-    margin: 10px 0px 10px;
+    flex-wrap: wrap;
+    margin-top: 10px;
 }
 
 .product-company-support div {
@@ -256,41 +286,19 @@ form div textarea {
         justify-content: space-between;
     }
 
-
-    .list-container{
-        display: flex;
-        flex-direction:row;
-        align-content: space-between;
-    }
-
     footer{
         justify-content: center;
     }
 
-    .lorem-p-img-1{
-        display: flex;
-    }
-
-    .lorem-p-img-2{
-        flex-direction: row-reverse;
-        display: flex;
-        align-items: center;
-    }
-
-    .lorem-p-img-2 img{
-        align-self: center
-    }
     #lorem-p-3{
         display: none;
     }
 
-}
-
-@media screen and (min-width:480px){
-
     .lorem{
         display:none;
     }
+
+   
 
     article{
         display: flex;
@@ -303,7 +311,13 @@ form div textarea {
         margin-right: 30px;
     }
 
+    .product-company-support {
+        flex-direction: row;
+        justify-content: space-around;
+        
+    }
 }
+
 
 @media only screen and (max-width:480px) {
     
@@ -315,43 +329,20 @@ form div textarea {
 }
 
 
-/* @media screen and (min-width:1024px){
+@media screen and (min-width:1024px){
+    .why-track-divs {
+        width: 20%;
+        align-content: space-between;
+    }
 
-
-    main section:first-child{
+    .article-containers {
         display: flex;
-        flex-direction: row-reverse;
-     }
-
-    .why-divs-first-pair{
-        display: flex;
-        flex-direction: row;
-        
+        flex-wrap: wrap;
+        align-items: center;
     }
 
-    .why-divs-second-pair{
-        display: flex;
-        flex-direction: row;
-        
+    article {
+        width: 40%;
     }
 
-
-    .article-containers{
-        display:flex;
-        justify-content:center;
-        align-content: stretch;
-    }
-    
-    article{
-            flex:50%;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-        }
-    
-    article img{
-        align-self: center;
-    }
-    
-    
-} */
+}
