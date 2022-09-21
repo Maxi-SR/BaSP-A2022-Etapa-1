@@ -10,10 +10,17 @@ html,body {
     margin: 0;
 }
 
+
 h3 {
     font-size: 1.25rem;
 }
 
 p {
     font-size: 0.75rem;
+}
+
+@media screen and (min-width:1024px){
+    main, header, footer {
+        margin-left: 35%;
+    }
 }

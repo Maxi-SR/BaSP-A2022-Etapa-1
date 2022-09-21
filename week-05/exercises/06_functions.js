@@ -7,13 +7,13 @@ console.log("-------EXERCISE 6.A--------------------");
 function suma(a,b){
     return a + b;
 }
+
 var sumar = suma(5,2);
 console.log("El resultado de sumar 2 + 5 llamando a la función suma es:", sumar);
 
 /*EJERCICIO 6.b) A la función suma anterior, agregarle una validación para controlar si alguno de los
 parámetros no es un número; de no ser un número, mostrar una alerta aclarando que uno de los parámetros
 tiene error y retornar el valor NaN como resultado.
-
 */
 console.log("-------EXERCISE 6.B--------------------");
 function suma(a,b){
@@ -47,13 +47,11 @@ function suma2(a,b){
     }
     var primerParam = validateInteger(a);
     var segundoParam = validateInteger(b);
-    if (!primerParam && !segundoParam){
-        alert("Ningún parámetro es entero");
-        return Math.round(a + b);
-    }else if(!primerParam){
+    if(!primerParam){
         alert("Primer parámetro no es un entero:");
         return Math.round(a + b);
-    }else if (!segundoParam){
+    }
+    if (!segundoParam){
         alert("Segundo parámetro no es un entero:");
         return Math.round(a + b);
     }
@@ -66,9 +64,27 @@ console.log("La suma redondeada es:",sumarEnteros);
 /*Convertir la validación del ejercicio 6d) en una función separada y llamarla dentro de la función suma 
 probando que todo siga funcionando igual. */
 console.log("-------EXERCISE 6.E--------------------");
+function sumarSeparada(a,b){
+    if ( isNaN(a) || isNaN(b)){
+        alert("a ó b no es un número");
+        return NaN;
+    }
+    var primerParam = validateInteger(a);
+    var segundoParam = validateInteger(b);
+    if(!primerParam){
+        alert("Primer parámetro no es un entero:");
+        return Math.round(a + b);
+    }
+    if (!segundoParam){
+        alert("Segundo parámetro no es un entero:");
+        return Math.round(a + b);
+    }
+    return a + b;
+}
+
 function suma3(a,b){
-    var funcionaIgual = suma2(a,b);
+    var funcionaIgual = sumarSeparada(a,b);
     return funcionaIgual;
 }
-var sumarEnteros2 = suma3(5.5,5.55);
-console.log("La suma redondeada es:",sumarEnteros2);
+
+var sumarEnteros2 = suma3(5,5.55);

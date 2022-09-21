@@ -75,10 +75,6 @@ main section {
     padding: 0.2rem;
 }
 
-.functions-text p {
-    font-size: 1rem;
-}
-
 #why-track-time-title {
     font-weight: 700;
     font-size: 1.6rem;
@@ -108,7 +104,6 @@ main section {
 .card-title-and-img {
     display: flex;
     justify-content: space-between;
-    
 }
 
 .card-title-and-img h3 {
@@ -134,7 +129,6 @@ main section {
     margin-bottom:1.1rem;
 }
 
-
 #contact-us {
     font-weight: 700;
     font-size: 1.6rem;
@@ -149,22 +143,13 @@ main section {
     align-content: space-between;
 }
 
-form div input {
+form div input,select {
     width: 100%;
     margin: 10px 0px 10px;
     background-color: #373867;
     color:rgba(255, 255, 255, 1);
     border-radius: 4px;
     height: 37px;
-}
-
-form div select {
-    width: 100%;
-    background-color: #373867;
-    color: rgba(255, 255, 255, 1);
-    border-radius: 4px;
-    height: 37px;
-    margin: 10px 0px 20px;
 }
 
 form div textarea {
@@ -254,12 +239,9 @@ form div textarea {
     border-radius: 60px;
 }
 
-#amet-aungue {
-    font-size: 20px;
-}
-
 .amet-aungue-mobile-container p {
     margin-left: 20px;
+    margin-top: 10px;
 }
 
 .product-company-support {
