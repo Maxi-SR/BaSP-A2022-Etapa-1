@@ -31,6 +31,7 @@ https://maxi-sr.github.io/BaSP-A2022-Etapa-1/week-04/
 
 ## Week 5
 We started with javascript, especifically doing some excercises.
+https://maxi-sr.github.io/BaSP-A2022-Etapa-1/week-05/
 
 ### Need help?
 *Contact us!*
