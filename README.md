@@ -22,10 +22,12 @@ The Radium Rocket team started to develop the project,this week only the index.h
 
 This week we are dedicated to giving the style made in figma in week 1.
 We only use css to do that.
+https://maxi-sr.github.io/BaSP-A2022-Etapa-1/week-03/
 
 ## Week 4
 
 We introduce responsive design using flexbox and media queries.
+https://maxi-sr.github.io/BaSP-A2022-Etapa-1/week-04/
 
 ## Week 5
 We started with javascript, especifically doing some excercises.
