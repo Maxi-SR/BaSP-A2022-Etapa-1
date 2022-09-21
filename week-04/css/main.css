@@ -4,9 +4,15 @@ main {
     margin: 10px 40px 40px;
 }
 
+.first-section div {
+    display: flex;
+    flex-direction: column;
+}
+
 #first-section-inside-main-img {
     max-width: 325px;
     padding-top: 10px;
+    align-self: flex-start;
 }
 
 #first-section-inside-main-title {
@@ -19,6 +25,11 @@ main {
 #first-section-inside-main-subtitle {
     font-size: 20px;
     padding: 0px 0px 10px;
+    align-self: flex-start;
+}
+
+#learn-more-text {
+    align-self: flex-start;
 }
 
 #learn-more-button {
@@ -30,20 +41,19 @@ main {
     border-radius:4px;
     text-transform:uppercase;
     padding:0.8rem 1.6rem;
-    margin: 20px 0px 10px;
+    margin: 30px 0px 10px;
     font-size:0.8rem;
     font-weight:900;
+    justify-self: flex-end;
 }
 
-section {
+main section {
     border-bottom: 4px solid #49a37b;
     display: flex;
-    
+    flex-direction: column;
     flex-wrap: wrap;
-    padding-bottom: 10px;
+    padding-bottom: 40px;
 }
-
-
 
 #functions-title {
     font-weight: 700;
@@ -55,6 +65,9 @@ section {
 
 .functions-titles {
     font-size: 1.2rem;
+    font-weight: 700;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
 }
 
 .functions-text {
@@ -79,6 +92,7 @@ section {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding-top: 50px;
 }
 
 .why-track-divs {
@@ -198,7 +212,6 @@ form div textarea {
     align-self: flex-start;
 }
 
-
 .lorem-2 {
     display: flex;
     flex-wrap: wrap;
@@ -266,13 +279,12 @@ form div textarea {
     margin-bottom: 10px;
 }
 
-.footer-container {
-    display: flex;
-    justify-content: center;
+.text-first-container {
+    align-self: flex-start;
 }
 
-@media screen and (min-width:480px){
 
+@media screen and (min-width:480px){
     .why-track-divs {
         width: 40%;
     }
@@ -286,27 +298,25 @@ form div textarea {
         justify-content: space-between;
     }
 
-    footer{
+    footer {
         justify-content: center;
     }
 
-    #lorem-p-3{
+    #lorem-p-3 {
         display: none;
     }
 
-    .lorem{
+    .lorem {
         display:none;
     }
 
-   
-
-    article{
+    article {
         display: flex;
         justify-content: center;
         align-items:flex-start;
     }
 
-    article img{
+    article img {
         align-self: center;
         margin-right: 30px;
     }
@@ -318,21 +328,21 @@ form div textarea {
     }
 }
 
-
 @media only screen and (max-width:480px) {
-    
-    
-    .lorem-2{
+    .lorem-2 {
         display: none;
     }
-
 }
 
-
 @media screen and (min-width:1024px){
+    main, header, footer {
+        margin-left: 35%;
+    }
+
     .why-track-divs {
-        width: 20%;
+        width: 23%;
         align-content: space-between;
+        margin: 0px;
     }
 
     .article-containers {
@@ -342,7 +352,19 @@ form div textarea {
     }
 
     article {
-        width: 40%;
+        width: 50%;
     }
 
+    .first-section {
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+    
+    .first-section div {
+        width: 40%;
+        align-self: flex-start;
+    }
 }
+

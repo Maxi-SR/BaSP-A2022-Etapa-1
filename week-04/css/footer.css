@@ -1,9 +1,15 @@
-.social-ntw{
-    padding-top: 10px;
+.social-ntw {
     display: flex;
+    padding-top: 10px;
     justify-content: center;
 }
 
-.montevideo{
+.montevideo {
     text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }

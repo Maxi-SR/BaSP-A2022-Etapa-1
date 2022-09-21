@@ -1,10 +1,10 @@
-.search{
+.search {
     background-color:#373867;
     height:159px;
     box-sizing:border-box;
 }
 
-.search input{
+.search input {
     margin:64px 33px 35px 44px;
     width: 200px;
     height:60px;
@@ -17,49 +17,57 @@
     font-family:'Roboto';
 }
 
-aside{
+aside {
     position: fixed;
     background-color:rgba(38, 40, 98, 1);
     height: 100%;
     width: 30%;
     top: 0;
     left: 0;
+    min-width: 252px;
 }
 
 
-.sidebar-page-go{
+.sidebar-page-go {
     display: flex;
     flex-direction: column;
     margin: 10px;
 }
 
-.sidebar-page-go a{
-    border-bottom-style: solid;
-    border-bottom-color: #49A37B;
+.sidebar-page-go a {
+    border-bottom:1px solid #49A37B ;
     color: white;
     padding-top: 40px;
+    padding-bottom: 1.2rem;
     text-decoration-line: none;
 }
 
-.contact-container-aside{
+.contact-container-aside {
     margin:10px;
+    margin-top: 50px;
 }
 
-.contact-container-aside address{
+.contact-container-aside p {
+    margin-top: 20px;
+}
+
+.contact-container-aside address {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    
 }
 
-.contact-container-aside address a{
+.contact-container-aside address a {
     color: aliceblue;
     padding-top: 40px;
     text-decoration-line: none;
+    border-bottom: 1px solid #49A37B;
+    padding-bottom: 10px;
 }
 
 #get-in-touch{
-    border-bottom-style: solid;
-    border-bottom-color: #49A37B;
+    border-bottom:1px solid #49A37B;
+    padding-bottom: 1rem;
 }
 
 @media screen and (max-width:1024px) {
