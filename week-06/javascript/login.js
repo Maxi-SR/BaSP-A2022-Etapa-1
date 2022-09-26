@@ -15,7 +15,6 @@ window.onload = function() {
         }
     }
 
-
     inputEmail.onfocus = function() {
         document.getElementById("error-message-email").innerText = "";
     }
@@ -28,10 +27,33 @@ window.onload = function() {
             document.getElementById("error-message-password").innerText = "There must be 8 characters at least.";
         }else{
             document.getElementById("error-message-password").innerText = "";
+            inputPassword.classList.add("isOk");
             
-        }
-        
+        }        
     }
+
+    inputPassword.onfocus = function() {
+        inputPassword.classList.remove("isOk");
+        document.getElementById("error-message-password").innerText = "";
+    }
+
+    var submitButton = document.getElementById("submit-button");
+    submitButton.addEventListener("click", (e) => {
+        e.preventDefault();
+        if(inputEmail.classList.contains("isOk") && inputPassword.classList.contains("isOk")){
+            console.log("todo bien");
+                alert("Email: " + inputEmail.value + "\nPassword: " + inputEmail.value);
+        }else {
+            if (inputEmail.classList.contains("isOk")){
+                alert("Oops! The password must contains 8 characters at least, try again");
+            }else if(inputPassword.classList.contains("isOk")){
+                alert("Oops! Invalid email,try again");
+            }else {
+                alert("Both inputs are wrong! Try again");
+            }
+        }
+    } )
+
 }
 
 
