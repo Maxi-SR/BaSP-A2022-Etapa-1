@@ -33,6 +33,10 @@ https://maxi-sr.github.io/BaSP-A2022-Etapa-1/week-04/
 We started with javascript, especifically doing some excercises.
 https://maxi-sr.github.io/BaSP-A2022-Etapa-1/week-05/
 
+## Week 5
+We are doing DOM events in login and sign-up forms.
+https://maxi-sr.github.io/BaSP-A2022-Etapa-1/week-06/views/index.html
+
 ### Need help?
 *Contact us!*
 

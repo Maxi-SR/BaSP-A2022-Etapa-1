@@ -1,0 +1,352 @@
+main {    
+    border-top-style: solid;
+    border-top-color:rgba(73, 163, 123, 1);
+    margin: 10px 40px 40px;
+}
+
+.first-section div {
+    display: flex;
+    flex-direction: column;
+}
+
+#first-section-inside-main-img {
+    max-width: 325px;
+    padding-top: 10px;
+    align-self: flex-start;
+}
+
+#first-section-inside-main-title {
+    display: flex;
+    font-size: 29px;
+    align-self: flex-start;
+    padding: 10px 0px 20px;
+}
+
+#first-section-inside-main-subtitle {
+    font-size: 20px;
+    padding: 0px 0px 10px;
+    align-self: flex-start;
+}
+
+#learn-more-text {
+    align-self: flex-start;
+}
+
+#learn-more-button {
+    color:aliceblue;
+    background-color:#49A37B;
+    width:167px;
+    text-decoration-line:none;
+    text-align:center;
+    border-radius:4px;
+    text-transform:uppercase;
+    padding:0.8rem 1.6rem;
+    margin: 30px 0px 10px;
+    font-size:0.8rem;
+    font-weight:900;
+    justify-self: flex-end;
+}
+
+main section {
+    border-bottom: 4px solid #49a37b;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-bottom: 40px;
+}
+
+#functions-title {
+    font-weight: 700;
+    font-size: 1.6rem;
+    border-bottom: 4px solid #49a37b;
+    margin: 10px 0px 20px;
+    align-self: flex-start;
+}
+
+.functions-titles {
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+}
+
+.functions-text {
+    margin-bottom: 2rem;
+    padding: 0.2rem;
+}
+
+#why-track-time-title {
+    font-weight: 700;
+    font-size: 1.6rem;
+    margin: 20px 0px 10px;
+    border-bottom: 4px solid #49a37b;
+    padding: 10px;
+    align-self: flex-start;
+}
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 50px;
+}
+
+.why-track-divs {
+    background-color:white;
+    color:#373867;
+    border-radius:17px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.card-title-and-img {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-title-and-img h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-top: 30px;
+    margin-left:1.2rem;
+}
+
+.why-track-divs p {
+    width: 85%;
+    text-align: justify;
+    font-size: 0.75rem;
+    padding-bottom: 0.8rem;
+    margin-left: 1.2rem;
+    padding-right: 10px;
+}
+
+.why-track-divs img {
+    align-self: center;
+    margin-right:1.3rem;
+    margin-top: 1.3rem;
+    margin-bottom:1.1rem;
+}
+
+#contact-us {
+    font-weight: 700;
+    font-size: 1.6rem;
+    border-bottom: 4px solid #49a37b;
+    padding: 10px;
+    align-self: flex-start;
+}
+
+.inputs-text-email {
+    display: flex;
+    margin: 0px;
+    align-content: space-between;
+}
+
+form div input,select {
+    width: 100%;
+    margin: 10px 0px 10px;
+    background-color: #373867;
+    color:rgba(255, 255, 255, 1);
+    border-radius: 4px;
+    height: 37px;
+}
+
+form div textarea {
+    width:100%;
+    background-color: #373867;
+    color: rgba(255, 255, 255, 1);
+    border-radius: 4px;
+}
+
+#submit-and-reset-button {
+    display: flex;  
+    justify-content: left;
+}
+
+#submit-and-reset-button input {
+    margin-inline: 10px;
+    margin-left: 0px;
+}
+
+#submit-btn {
+    background-color:#49A37B;
+    color:white;
+    border-style:none;
+    height:34px;
+    width:87px;
+    border-radius:4px;
+    margin-top: 10px;    
+}
+
+#reset-btn {
+    background-color:rgba(241, 51, 18, 1);
+    color:white;
+    border-style:none;
+    height:34px;
+    width:87px;
+    border-radius:4px;
+    margin-top: 10px;
+}
+
+#about-us {
+    border-bottom: 4px solid #49a37b;
+    padding: 10px;
+    font-weight: 700;
+    font-size: 1.6rem;
+    align-self: flex-start;
+}
+
+.lorem-2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.lorem-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.lorem-container p {
+    margin-left: 20px;
+    margin-right: 20px;
+    align-self: center;
+}
+
+.lorem-2 img {
+    align-self: center;
+    border: 4px solid white;
+    border-radius: 60px;
+    max-width: 200px;
+    max-height: 150px;
+    margin-bottom: 10px;
+}
+
+.lorem-title {
+    font-size:20px;
+    padding: 20px 10px 20px;
+}
+
+.lorem-mobile-container {
+    display: flex;
+    margin: 10px 0px 20px;
+}
+
+.lorem-mobile-container img {
+    align-self: center;
+    border:4px solid white;
+    border-radius: 60px;
+}
+
+.amet-aungue-mobile-container p {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.product-company-support {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.product-company-support div {
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.product-company-support h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.text-first-container {
+    align-self: flex-start;
+}
+
+
+@media screen and (min-width:480px){
+    .why-track-divs {
+        width: 40%;
+    }
+
+    form div input {
+        width: 45%;
+    }
+
+    .inputs-name-email {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    footer {
+        justify-content: center;
+    }
+
+    #lorem-p-3 {
+        display: none;
+    }
+
+    .lorem {
+        display:none;
+    }
+
+    article {
+        display: flex;
+        justify-content: center;
+        align-items:flex-start;
+    }
+
+    article img {
+        align-self: center;
+        margin-right: 30px;
+    }
+
+    .product-company-support {
+        flex-direction: row;
+        justify-content: space-around;
+        
+    }
+}
+
+@media only screen and (max-width:480px) {
+    .lorem-2 {
+        display: none;
+    }
+}
+
+@media screen and (min-width:1024px){
+    main, header, footer {
+        margin-left: 35%;
+    }
+
+    .why-track-divs {
+        width: 23%;
+        align-content: space-between;
+        margin: 0px;
+    }
+
+    .article-containers {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    article {
+        width: 50%;
+    }
+
+    .first-section {
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+    
+    .first-section div {
+        width: 40%;
+        align-self: flex-start;
+    }
+}
+
