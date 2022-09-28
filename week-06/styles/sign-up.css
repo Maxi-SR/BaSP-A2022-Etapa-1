@@ -1,0 +1,119 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    margin: 20px;
+}
+
+.main-container {
+    display: flex;
+    width: 100%;
+    height: 573px;
+    background-color: white;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#sign-up-title {
+    margin-top: 30px;
+    position: absolute;
+    font-size: 5vh;
+    color: #190E5E;
+}
+
+td input {
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 1px solid black;
+}
+
+
+#create-account-button {
+    align-self: center;
+}
+
+
+
+#create-account-button input {
+    font-weight: 700;
+    background-color: #AACE9B;
+    color: white;
+    border: 2px solid #49A37B;
+    border-radius: 4px;
+    font-display: flex;
+    font-weight: 700v;
+    padding: 1vw;
+} 
+
+
+.container-items {
+    display: flex;
+    align-self: center;
+}
+
+table {
+    margin: 0px 30px 0px;
+}
+
+
+td input {
+    width: 50%;
+}
+
+td label {
+    width: 50%;
+}
+
+td {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+} 
+
+
+.isOk {
+    border: 2px solid green;
+    border-radius: 3px;
+    padding: 5px;
+}
+
+.notOk {
+    border: 2px solid red;
+    border-radius: 3px;
+    padding: 5px;
+}
+
+.error-message {
+    color: red;
+}
+
+#has-an-account {
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+#has-an-account a {
+    display: flex;
+    flex-wrap: nowrap;
+    font-size: 1.2vh;
+    font-weight: 700;
+}
+
+@media screen and (max-width:375px) {
+    #sign-up-title {
+        margin-top: 2px;
+    }
+
+    .container-items {
+        flex-direction: column;
+    }
+
+    
+}

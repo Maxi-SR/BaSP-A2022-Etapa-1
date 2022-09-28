@@ -38,7 +38,7 @@ window.onload = function() {
     }
 
     var submitButton = document.getElementById("submit-button");
-    submitButton.addEventListener("click", (e) => {
+    submitButton.addEventListener("click", function(e) {
         e.preventDefault();
         if(inputEmail.classList.contains("isOk") && inputPassword.classList.contains("isOk")){
             console.log("todo bien");
