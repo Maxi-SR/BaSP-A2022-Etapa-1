@@ -1,0 +1,78 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    margin: 20px;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 435px;
+    height: 573px;
+    background-color: white;
+}
+
+.container-items {
+    display: flex;
+    width: 60%;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-items {
+    align-self: center;
+    margin-top: 40px;
+}
+
+#log-in-title {
+    font-size: 36px;
+    font-weight: 400;
+}
+
+#remember-me-container {
+    display: flex;
+    align-self: flex-start;
+}
+
+#checkbox-input {
+    margin-right: 10px;
+}
+
+.input-email, .input-password {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    width: 100%;
+    border-bottom: 1px solid black;
+    padding: 5px;
+}
+
+input[type=submit] {
+    width: 60%;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 10px;
+    background-color: #AACE9B;
+    border: 1px solid #373867;
+    border-radius: 5px;
+}
+
+
+.isOk {
+    width: 100%;
+    border: 2px solid green;
+    border-radius: 3px;
+    padding: 5px;
+}
+
+#error-message-email, #error-message-password{
+    color: red;
+}
+
+
+
+

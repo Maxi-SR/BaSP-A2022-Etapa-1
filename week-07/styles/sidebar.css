@@ -1,0 +1,84 @@
+.search {
+    background-color:#373867;
+    height:80px;
+    box-sizing:border-box;
+}
+
+.search input {
+    margin:20px 33px 35px 44px;
+    width: 200px;
+    height:40px;
+    background-color:rgba(38, 40, 98, 1);
+    border-color:#49A37B;
+    color:white;
+    max-width:348px;
+    max-height:60px;
+    border-radius:5px;
+    font-family:'Roboto';
+}
+
+aside {
+    position: fixed;
+    background-color:rgba(38, 40, 98, 1);
+    height: 100%;
+    width: 30%;
+    top: 0;
+    left: 0;
+    min-width: 252px;
+}
+
+
+.sidebar-page-go {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.sidebar-page-go a {
+    border-bottom:1px solid #49A37B ;
+    color: white;
+    padding-top: 15px;
+    padding-bottom: 1.2rem;
+    text-decoration-line: none;
+}
+
+.contact-container-aside {
+    margin:10px;
+    margin-top: 50px;
+}
+
+.contact-container-aside p {
+    margin-top: 20px;
+}
+
+.contact-container-aside address {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.contact-container-aside address a {
+    color: aliceblue;
+    padding-top: 20px;
+    text-decoration-line: none;
+    border-bottom: 1px solid #49A37B;
+    padding-bottom: 10px;
+}
+
+#get-in-touch{
+    border-bottom:1px solid #49A37B;
+    padding-bottom: 1rem;
+}
+
+@media screen and (max-width:1024px) {
+    aside {
+        display: none;
+    };
+    
+}
+
+
+
+
+
+
