@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This web app is to register employee's hours working on a project">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/sidebar.css">
+    <link rel="stylesheet" href="../styles/sign-up.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/style.css">
+    <script src="../javascript/sign-up.js"></script>
+    <title>Trackgenix:register hours to employees</title>
+</head>
+
+<body>
+    <aside class="sidebar">
+        <section class="container-1-aside">
+            <div class="search">
+                <input type="search" placeholder="Search">
+            </div>
+            <div class="sidebar-page-go">
+                <a id="home" href="index.html">Home</a>
+                <a id="sign-in" href="sign-up.html">Sign Up</a>
+                <a id="login" href="login.html">Log in</a>
+            </div>
+        </section>
+        <section class="contact-container-aside">
+            <h3 id="get-in-touch">Get In Touch</h3>
+            <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                when an unknown printer took a galley of type and scrambled it to make a type
+                specimen book.
+            </p>
+            <address>
+                <a id="address" href="">
+                    <img src="../img/IconAdress.png" alt="icon-addres"> 1245 Sffeinvrjrs, Bnaudads
+                </a>
+                <a id="email" href="">
+                    <img src="../img/IconEmail.png" alt="icon-email"> sikififgnms@gmail.com
+                </a>
+                <a id="phone" href="">
+                    <img src="../img/IconTelephone.png" alt="icon-phone"> 0981271841
+                </a>
+            </address>
+        </section>
+    </aside>
+    <header>
+        <h1 id="principal-title">Trackgenix</h1>
+        <p id="subtitle-right">By GigaTech Software Solution SA</p>
+    </header>
+    <main>
+        <div id="sign-up-title">
+            <h1>Sign Up</h1>
+        </div>
+        <div class="main-container">
+            <form id="form-inputs" class="container-items" autocomplete="off">
+                <div class="col-1">
+                    <div>
+                        <label for="first-name">First Name</label>
+                        <input class="input-style" type="text" id="first-name">
+                    </div>
+                    <p id="first-name-error" class="error-message"></p>
+                    <div>
+                        <label for="last-name">Last Name</label>
+                        <input class="input-style" type="text" id="last-name">
+                    </div>
+                    <p id="last-name-error" class="error-message"></p>
+                    <div>
+                        <label for="dni">DNI</label>
+                        <input class="input-style" type="text" id="dni">
+                    </div>
+                    <p id="dni-error" class="error-message"></p>
+                    <div>
+                        <label for="phone-number">Phone</label>
+                        <input class="input-style" type="text" id="phone-number">
+                    </div>
+                    <p id="phone-error" class="error-message"></p>
+                    <div>
+                        <label for="input-address">Address</label>
+                        <input class="input-style" type="text" id="input-address">
+                    </div>
+                    <p id="address-error" class="error-message"></p>
+                </div>
+                <div class="col-2">
+                    <div>
+                        <label for="location">Location</label>
+                        <input class="input-style" type="text" id="location">
+                    </div>
+                    <p id="location-error" class="error-message"></p>
+                    <div>
+                        <label for="area-code">Area code</label>
+                        <input class="input-style" type="text" id="area-code">
+                    </div>
+                    <p id="area-code-error" class="error-message"></p>
+                    <div>
+                        <label for="input-email">Email</label>
+                        <input class="input-style" type="text" id="input-email">
+                    </div>
+                    <p id="error-message-email" class="error-message"></p>
+                    <div>
+                        <label for="password">Password</label>
+                        <input class="input-style" type="password" id="password">
+                    </div>
+                    <p id="error-message-password" class="error-message"></p>
+                    <div>
+                        <label for="repeat-password">Repeat password</label>
+                        <input class="input-style" type="password" id="repeat-password">
+                    </div>
+                    <p id="error-message-rpt-pass" class="error-message"></p>
+                    <div>
+                        <label for="born-date">Date of birth</label>
+                        <input class="input-style" type="date" id="born-date">
+                    </div>
+                    <p class="error-message"></p>
+                </div>
+                <div id="create-account-button">
+                    <input type="submit" value="CREATE ACCOUNT">
+                    <div id="has-an-account">
+                        <p>Already have an account?</p>
+                        <a href="login.html"> Sign in</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <section class="footer-container">
+            <div class="social-ntw">
+                <a href="">
+                    <img src="../img/fb.png" alt="facebook-icon">
+                </a>
+                <a href="">
+                    <img src="../img/in.png" alt="linkedin-icon">
+                </a>
+                <a href="">
+                    <img src="../img/tw.png" alt="twitter-icon">
+                </a>
+                <a href="">
+                    <img src="../img/ig.png" alt="instagram-icon">
+                </a>
+                <a href="">
+                    <img src="../img/gh.png" alt="github-icon">
+                </a>
+            </div>
+            <div class="montevideo">
+                <p class="montevideo">Montevideo,Uruguay.</p>
+                <p class="Copyright">Copyright &copy; 2022 GigaTech Software Solution SA</p>
+            </div>
+        </section>
+    </footer>
+</body>
+
+</html>

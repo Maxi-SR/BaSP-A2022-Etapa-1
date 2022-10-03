@@ -12,8 +12,6 @@ if(randomNumber >= 0.5){
     alert("Lower than 0,5");
 }
 
-
-
 /*EJERCICIO 4.b) Crear una variable “Age” que contenga un número entero entre 0 y 100 y
 muestre los siguientes mensajes de alerta:
 i) “Bebe” si la edad es menor a 2 años;
@@ -28,17 +26,17 @@ console.log("-------EXERCISE 4.B--------------------");
 var age = (Math.random()*100);
 console.log(age);
 if (age < 2){
-    alert("Bebé")   
-}else if(age < 12 ){
-    alert("Niño")
-}else if(age < 19){
-    alert("Adolescente")
-}else if(age < 30){
-    alert("Joven")
-}else if(age < 60){
-    alert("Adulto")
-}else if(age < 75){
-    alert("Adulto mayor")
-}else{
-    alert("Anciano")
+        alert("Bebé")   
+    }else if(age < 12 ){
+        alert("Niño")
+    }else if(age < 19){
+        alert("Adolescente")
+    }else if(age < 30){
+        alert("Joven")
+    }else if(age < 60){
+        alert("Adulto")
+    }else if(age < 75){
+        alert("Adulto mayor")
+    }else{
+        alert("Anciano")
 }
