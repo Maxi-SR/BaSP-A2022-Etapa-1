@@ -12,7 +12,6 @@ function onlyLetters(stringToCheck) {
     return false;
 }
 
-
 function onlyNumbers(stringToCheck) {
     var numbers = "0987654321";
     var cont = 0;
@@ -30,7 +29,6 @@ function onlyNumbers(stringToCheck) {
 function hasLetters(stringToCheck) {
     var letters = "abcdefghijklmnñopqrstuvwxyz";
     var i = 0;
-
     while ((i < stringToCheck.length)) {
         if (letters.includes(stringToCheck[i])) {
             return true;
@@ -43,7 +41,6 @@ function hasLetters(stringToCheck) {
 function hasNumbers(stringToCheck) {
     var numbers = "1234567890";
     var i = 0;
-
     while ((i < stringToCheck.length)) {
         if (numbers.includes(stringToCheck[i])) {
             return true;
@@ -70,14 +67,11 @@ function fixFormatDate(date) {
     var dd = dateSplited[2];
     var mm = dateSplited[1];
     var aaaa = dateSplited[0];
-    console.log(dateSplited)
     var dateFormat = mm + "/" + dd + "/" + aaaa;
     return dateFormat;
 }
 
 window.onload = function () {
-
-
     /* ------------------name input validation------------------- */
     var inputName = document.getElementById("first-name");
     inputName.onblur = function () {
@@ -92,14 +86,12 @@ window.onload = function () {
             inputName.classList.add("notOk")
         }
     }
-
     inputName.onfocus = function () {
         inputName.classList.remove("isOk");
         inputName.classList.remove("notOk");
         document.getElementById("first-name-error").innerText = "";
     }
     /*-----------------------------------------------------------*/
-
 
     /* ------------------last name input validation------------------- */
     var inputLastName = document.getElementById("last-name");
@@ -122,7 +114,6 @@ window.onload = function () {
     }
     /*----------------------------------------------------------------- */
 
-
     /*------------------------DNI input validation---------------------- */
     var inputDNI = document.getElementById("dni");
     inputDNI.onblur = function () {
@@ -138,14 +129,12 @@ window.onload = function () {
             inputDNI.classList.add("notOk");
         }
     }
-
     inputDNI.onfocus = function () {
         inputDNI.classList.remove("isOk");
         inputDNI.classList.remove("notOk");
         document.getElementById("dni-error").innerText = "";
     }
     /*-----------------------------------------------------------------*/
-
 
     /*---------------- phone input validation ------------------------*/
 
@@ -167,7 +156,6 @@ window.onload = function () {
             }
         }
     }
-
     inputPhone.onfocus = function () {
         inputPhone.classList.remove("isOk");
         inputPhone.classList.remove("notOk");
@@ -176,13 +164,13 @@ window.onload = function () {
 
     /*------------------------------------------------------------------*/
 
-
     /*----------------address input validation------------------------- */
 
     var inputAddress = document.getElementById("input-address");
     inputAddress.onblur = function () {
         if (inputAddress.value.length < 5) {
             document.getElementById("address-error").innerText = "Must have 5 characters at least";
+            inputAddress.classList.add("notOk")
         } else {
             if (hasAnSpace(inputAddress.value) && hasLetters(inputAddress.value) && hasNumbers(inputAddress.value)) {
                 inputAddress.classList.add("isOk");
@@ -203,9 +191,7 @@ window.onload = function () {
         inputAddress.classList.remove("notOk");
     }
 
-
     /*----------------------------------------------------------------- */
-
 
     /*-----------------validate location input-------------------------- */
 
@@ -269,14 +255,14 @@ window.onload = function () {
             inputEmail.classList.add("isOk");
         } else {
             inputEmail.classList.remove("isOk");
-            inputEmail.classList.add("input-email");
+            inputEmail.classList.add("notOk")
             document.getElementById("error-message-email").innerText = "Invalid email, try again.";
         }
-
     }
-
     inputEmail.onfocus = function () {
         document.getElementById("error-message-email").innerText = "";
+        inputEmail.classList.remove("notOk");
+        inputEmail.classList.remove("isOk")
     }
 
     /*------------------------------------------------------------------- */
@@ -288,16 +274,16 @@ window.onload = function () {
         var passwordText = inputPassword.value;
         if (passwordText.length < 8) {
             document.getElementById("error-message-password").innerText = "There must be 8 characters at least.";
+            inputPassword.classList.add("notOk")
         } else {
             document.getElementById("error-message-password").innerText = "";
             inputPassword.classList.add("isOk");
-
         }
-
     }
 
     inputPassword.onfocus = function () {
         inputPassword.classList.remove("isOk");
+        inputPassword.classList.remove("notOk");
         document.getElementById("error-message-password").innerText = "";
     }
 
@@ -312,6 +298,7 @@ window.onload = function () {
             document.getElementById("error-message-rpt-pass").innerText = "";
         } else {
             document.getElementById("error-message-rpt-pass").innerText = "Passwords do not match";
+            repeatPassword.classList.add("notOk")
             repeatPassword.classList.remove("isOk");
         }
         if (repeatPassword.value == "") {
@@ -322,14 +309,12 @@ window.onload = function () {
     repeatPassword.onfocus = function () {
         document.getElementById("error-message-rpt-pass").innerText = "";
         repeatPassword.classList.remove("isOk");
+        repeatPassword.classList.remove("notOk")
     }
-
-
 
     /*------------------------------------------------------------------- */
 
     /*--------------------------input birthday -------------------------- */
-
 
     var createAccountButton = document.getElementById("form-inputs");
     createAccountButton.addEventListener("submit", function (e) {
@@ -342,13 +327,10 @@ window.onload = function () {
                 if (element.classList.contains("isOk")) {
                     cont = cont + 1;
                 }else{
-                    console.log(element)
                     arr_inputs[element.id] = element.value;
                 }
             }
-
         }
-        console.log(cont)
         if (cont == 10) {
             var name = inputName.value;
             var lastName = inputLastName.value;
@@ -361,18 +343,13 @@ window.onload = function () {
             var email = inputEmail.value;
             var password = inputPassword.value;
             var url = "https://basp-m2022-api-rest-server.herokuapp.com/signup?name=" + name + "&lastName=" + lastName + "&dni=" + dni + "&dob=" + dob + "&phone=" + phone + "&address=" + address + "&city=" + city + "&zip=" + zip + "&email=" + email + "&password=" + password;
-            console.log(url);
             fetch(url)
                 .then(response => response.json())
                 .then(data => {
                     alert(JSON.stringify(data))
                 })
-
         } else {
             alert("There are errors or some input was not completed!\n" + JSON.stringify(arr_inputs))
         }
-
-
     })
-
 }

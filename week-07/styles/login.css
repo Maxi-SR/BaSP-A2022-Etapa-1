@@ -4,7 +4,6 @@ main {
     align-items: center;
     color: #190E5E;
     margin: 20px;
-    height: 80%;
 }
 
 .main-container {
@@ -66,7 +65,6 @@ input[type=submit] {
     border: 1px solid #373867;
     border-radius: 5px;
 }
-
 
 .isOk {
     width: 100%;

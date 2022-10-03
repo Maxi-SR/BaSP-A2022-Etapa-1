@@ -37,9 +37,13 @@ https://maxi-sr.github.io/BaSP-A2022-Etapa-1/week-05/
 We are doing DOM events in login and sign-up forms.
 https://maxi-sr.github.io/BaSP-A2022-Etapa-1/week-06/views/index.html
 
+## Week 7
+We started to use fetch() api to get data from a server and validate 
+login and sign-up inputs with that data. Also, we manipulated the local storage.
+https://maxi-sr.github.io/BaSP-A2022-Etapa-1/week-06/views/index.html
+
 ### Need help?
 *Contact us!*
-
 
 ### Contributing ￼
 

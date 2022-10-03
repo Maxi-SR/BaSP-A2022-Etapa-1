@@ -19,7 +19,6 @@ window.onload = function () {
         document.getElementById("error-message-email").innerText = "";
     }
 
-
     var inputPassword = document.getElementById("input-password");
     inputPassword.onblur = function () {
         var passwordText = inputPassword.value;
@@ -28,7 +27,6 @@ window.onload = function () {
         } else {
             document.getElementById("error-message-password").innerText = "";
             inputPassword.classList.add("isOk");
-
         }
     }
 
