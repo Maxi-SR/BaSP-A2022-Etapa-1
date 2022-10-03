@@ -2,7 +2,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: black;
+    color: #190E5E;
     margin: 20px;
 }
 
@@ -13,7 +13,7 @@ main {
     align-items: center;
     width: 435px;
     height: 573px;
-    background-color: white;
+    background-color: lightgoldenrodyellow;
 }
 
 .container-items {
@@ -51,11 +51,17 @@ main {
     padding: 5px;
 }
 
+input {
+    outline: none;
+    background-color: lightgoldenrodyellow;
+}
+
 input[type=submit] {
     width: 60%;
     font-weight: 700;
     font-size: 15px;
     padding: 10px;
+    color: #190E5E;
     background-color: #AACE9B;
     border: 1px solid #373867;
     border-radius: 5px;

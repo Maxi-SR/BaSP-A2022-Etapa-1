@@ -1,79 +1,80 @@
 main {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    color: black;
+    flex-direction: column;
+    color: #190E5E;
     margin: 20px;
+    height: 90%;
+    background-color: lightgoldenrodyellow;
+    border-radius: 5px;
 }
 
 .main-container {
-    display: flex;
-    width: 100%;
-    height: 573px;
-    background-color: white;
-    align-items: flex-start;
-    justify-content: center;
-    flex-wrap: wrap;
+    margin: 10px;
 }
 
 #sign-up-title {
-    margin-top: 30px;
-    position: absolute;
+    margin-top: 80px;
+    margin-bottom: 40px; 
     font-size: 5vh;
     color: #190E5E;
+    align-self: center;
+    font-weight: 700;
 }
-
-td input {
-    border-top: none;
-    border-right: none;
-    border-left: none;
-    border-bottom: 1px solid black;
-}
-
 
 #create-account-button {
-    align-self: center;
+    margin-top: 30px;
 }
-
-
 
 #create-account-button input {
     font-weight: 700;
     background-color: #AACE9B;
-    color: white;
-    border: 2px solid #49A37B;
+    color:#190E5E;
+    border: 1px solid #190E5E;
     border-radius: 4px;
-    font-display: flex;
     font-weight: 700v;
-    padding: 1vw;
+    padding: 15px;
 } 
-
 
 .container-items {
     display: flex;
-    align-self: center;
-}
-
-table {
-    margin: 0px 30px 0px;
-}
-
-
-td input {
-    width: 50%;
-}
-
-td label {
-    width: 50%;
-}
-
-td {
-    display: flex;
+    justify-content: space-around;
     flex-wrap: wrap;
-    justify-content: space-between;
-    
-} 
+}
 
+.col-1 {
+    width: 45%;
+}
+
+.col-2 {
+    width: 45%;
+}
+
+.col-2 div{
+    display: flex;
+}
+
+.col-2 div label {
+    width: 100%;
+}
+
+.col-1 div{
+    display: flex;
+    margin-top: 5px;
+}
+
+.col-1 div label {
+    width: 100%
+}
+
+.input-style {
+    width: 100%;
+    height: 25px;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 1px solid black;
+    background-color: lightgoldenrodyellow;
+}
 
 .isOk {
     border: 2px solid green;
@@ -83,7 +84,6 @@ td {
 
 .notOk {
     border: 2px solid red;
-    border-radius: 3px;
     padding: 5px;
 }
 
@@ -92,7 +92,8 @@ td {
 }
 
 #has-an-account {
-    margin: 10px;
+    color: black;
+    margin-top: 10px;
     display: flex;
     flex-wrap: wrap;
     font-size: 20px;
@@ -100,20 +101,38 @@ td {
 }
 
 #has-an-account a {
-    display: flex;
-    flex-wrap: nowrap;
-    font-size: 1.2vh;
-    font-weight: 700;
+    font-size: 12px;
+    color: blue;
+    text-decoration: none;
 }
 
-@media screen and (max-width:375px) {
+#create-account-button {
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+}
+@media screen and (max-width:480px) {
     #sign-up-title {
-        margin-top: 2px;
+        margin-top: 10px;
+        margin-bottom: 0px;
     }
 
     .container-items {
         flex-direction: column;
+        margin: 10px;
     }
 
+    .col-1 {
+        width: 100%;
+    }
     
+    .col-2 {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .main-container {
+        flex-wrap: wrap;
+    }
 }
