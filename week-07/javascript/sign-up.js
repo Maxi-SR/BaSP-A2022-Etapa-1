@@ -1,4 +1,3 @@
-
 function onlyLetters(stringToCheck) {
     var letters = "abcdefghijklmnñopqrstuvwxyz ";
     var cont = 0;
@@ -128,13 +127,14 @@ window.onload = function () {
     var inputDNI = document.getElementById("dni");
     inputDNI.onblur = function () {
         var onlyNumbersInString = onlyNumbers(inputDNI.value);
-        if (onlyNumbersInString) {
+        if (onlyNumbersInString && (inputDNI.value.length == 7 || inputDNI.value.length == 8)) {
             inputDNI.classList.add("isOk");
         } else {
-            document.getElementById("dni-error").innerText = "Invalid DNI, only accepts number";
+            document.getElementById("dni-error").innerText = "Invalid DNI, only accepts number, and between 7 and 8 digits";
             inputDNI.classList.remove("isOk")
         }
         if (inputDNI.value == "") {
+            inputDNI.classList.remove("isOk")
             inputDNI.classList.add("notOk");
         }
     }
@@ -153,13 +153,14 @@ window.onload = function () {
     inputPhone.onblur = function () {
         if (inputPhone.value.length != 10) {
             document.getElementById("phone-error").innerText = "There must have 10 characters";
+            inputPhone.classList.add("notOk");
         } else {
             var onlyNumbersInString = onlyNumbers(inputPhone.value);
             if (onlyNumbersInString) {
                 inputPhone.classList.add("isOk");
             } else {
                 document.getElementById("phone-error").innerText = "Invalid phone, only accepts number";
-                inputPhone.classList.remove("isOk")
+                inputPhone.classList.remove("isOk");
             }
             if (inputPhone.value == "") {
                 inputPhone.classList.add("notOk");
@@ -199,6 +200,7 @@ window.onload = function () {
     inputAddress.onfocus = function () {
         document.getElementById("address-error").innerText = "";
         inputAddress.classList.remove("isOk");
+        inputAddress.classList.remove("notOk");
     }
 
 
@@ -250,6 +252,7 @@ window.onload = function () {
     inputAreaCode.onfocus = function () {
         document.getElementById("area-code-error").innerText = "";
         inputAreaCode.classList.remove("isOk");
+        inputAreaCode.classList.remove("notOk");
     }
 
     /*------------------------------------------------------------------- */
@@ -333,15 +336,19 @@ window.onload = function () {
         e.preventDefault();
         var cont = 0;
         var form = document.getElementById('form-inputs');
-
+        var arr_inputs= {};
         for (var element of form.elements) {
-            if (element.localName == "input") {
+            if (element.localName == "input" && (element.type =="text" || element.type == "password")) {
                 if (element.classList.contains("isOk")) {
                     cont = cont + 1;
+                }else{
+                    console.log(element)
+                    arr_inputs[element.id] = element.value;
                 }
             }
 
         }
+        console.log(cont)
         if (cont == 10) {
             var name = inputName.value;
             var lastName = inputLastName.value;
@@ -358,11 +365,11 @@ window.onload = function () {
             fetch(url)
                 .then(response => response.json())
                 .then(data => {
-                    console.log(data)
+                    alert(JSON.stringify(data))
                 })
 
         } else {
-            alert("There are errors or some input was not completed!")
+            alert("There are errors or some input was not completed!\n" + JSON.stringify(arr_inputs))
         }
 
 
