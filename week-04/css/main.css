@@ -38,7 +38,7 @@ main {
 section {
     border-bottom: 4px solid #49a37b;
     display: flex;
-    
+    flex-direction: column;
     flex-wrap: wrap;
     padding-bottom: 10px;
 }
