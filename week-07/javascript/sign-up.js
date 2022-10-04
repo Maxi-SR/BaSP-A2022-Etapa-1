@@ -83,7 +83,7 @@ window.onload = function () {
     var inputEmail = document.getElementById("input-email");
     var inputPassword = document.getElementById("password");
     var inputRepeatPassword = document.getElementById("repeat-password");
-    var inputDob = fixFormatDate(document.getElementById("born-date").value);
+    var inputDob = document.getElementById("born-date");
     var createAccountButton = document.getElementById("form-inputs");
     /*-------------------set local storage items to form if exists---------*/
     /*if the first item has a value then all items has too, cause I set items to local storage when
@@ -97,7 +97,7 @@ window.onload = function () {
         inputDNI.value  = localStorage.getItem("dni");
         inputDNI.classList.add("isOk")
         inputDob.value = localStorage.getItem("dob");
-        
+        inputDob.classList.add("isOk");
         inputPhone.value = localStorage.getItem("phone");
         inputPhone.classList.add("isOk")
         inputAddress.value = localStorage.getItem("address");
@@ -113,7 +113,19 @@ window.onload = function () {
         inputRepeatPassword.value = localStorage.getItem("repeatPassword")
         inputRepeatPassword.classList.add("isOk")
     }
+
     /*-------------------------------------------------------------------*/
+    var firstNameError = document.getElementById("first-name-error");
+    var lastNameError = document.getElementById("last-name-error");
+    var dniError = document.getElementById("dni-error");
+    var phoneError = document.getElementById("phone-error");
+    var addressError = document.getElementById("address-error");
+    var locationError = document.getElementById("location-error");
+    var areaCodeError = document.getElementById("area-code-error");
+    var errorMessageEmail = document.getElementById("error-message-email");
+    var errorMessagePassword = document.getElementById("error-message-password");
+    var repeatPasswordError = document.getElementById("error-message-rpt-pass");
+    var dobError = document.getElementById("dob-error-message");
 
     /* ------------------name input validation------------------- */
     inputName.onblur = function () {
@@ -121,7 +133,7 @@ window.onload = function () {
         if (onlyLettersInString && inputName.value.length >= 3) {
             inputName.classList.add("isOk")
         } else {
-            document.getElementById("first-name-error").innerText = "Invalid name, only accepts letters and more than 3.";
+            firstNameError.innerText = "Invalid name, only accepts letters and more than 3.";
             inputName.classList.remove("isOk")
         }
         if (inputName.value == "") {
@@ -131,7 +143,7 @@ window.onload = function () {
     inputName.onfocus = function () {
         inputName.classList.remove("isOk");
         inputName.classList.remove("notOk");
-        document.getElementById("first-name-error").innerText = "";
+        firstNameError.innerText = "";
     }
     /*-----------------------------------------------------------*/
 
@@ -141,7 +153,7 @@ window.onload = function () {
         if (onlyNumbersInString && inputLastName.value.length >= 3) {
             inputLastName.classList.add("isOk")
         } else {
-            document.getElementById("last-name-error").innerText = "Invalid last name, only accepts numbers and more tan 3.";
+            lastNameError.innerText = "Invalid last name, only accepts numbers and more tan 3.";
             inputLastName.classList.remove("isOk")
         }
         if (inputLastName.value == "") {
@@ -151,7 +163,7 @@ window.onload = function () {
     inputLastName.onfocus = function () {
         inputLastName.classList.remove("isOk");
         inputLastName.classList.remove("notOk")
-        document.getElementById("last-name-error").innerText = "";
+        lastNameError.innerText = "";
     }
     /*----------------------------------------------------------------- */
 
@@ -161,7 +173,7 @@ window.onload = function () {
         if (onlyNumbersInString && (inputDNI.value.length == 7 || inputDNI.value.length == 8)) {
             inputDNI.classList.add("isOk");
         } else {
-            document.getElementById("dni-error").innerText = "Invalid DNI, only accepts number, and between 7 and 8 digits";
+            dniError.innerText = "Invalid DNI, only accepts number, and between 7 and 8 digits";
             inputDNI.classList.remove("isOk")
         }
         if (inputDNI.value == "") {
@@ -172,7 +184,7 @@ window.onload = function () {
     inputDNI.onfocus = function () {
         inputDNI.classList.remove("isOk");
         inputDNI.classList.remove("notOk");
-        document.getElementById("dni-error").innerText = "";
+        dni.innerText = "";
     }
     /*-----------------------------------------------------------------*/
 
@@ -186,7 +198,7 @@ window.onload = function () {
             if (onlyNumbersInString) {
                 inputPhone.classList.add("isOk");
             } else {
-                document.getElementById("phone-error").innerText = "Invalid phone, only accepts number";
+                phoneError.innerText = "Invalid phone, only accepts number";
                 inputPhone.classList.remove("isOk");
             }
             if (inputPhone.value == "") {
@@ -197,7 +209,7 @@ window.onload = function () {
     inputPhone.onfocus = function () {
         inputPhone.classList.remove("isOk");
         inputPhone.classList.remove("notOk");
-        document.getElementById("phone-error").innerText = "";
+        phoneError.innerText = "";
     }
 
     /*------------------------------------------------------------------*/
@@ -205,14 +217,14 @@ window.onload = function () {
     /*----------------address input validation------------------------- */
     inputAddress.onblur = function () {
         if (inputAddress.value.length < 5) {
-            document.getElementById("address-error").innerText = "Must have 5 characters at least";
+            addressError.innerText = "Must have 5 characters at least";
             inputAddress.classList.add("notOk")
         } else {
             if (hasAnSpace(inputAddress.value) && hasLetters(inputAddress.value) && hasNumbers(inputAddress.value)) {
                 inputAddress.classList.add("isOk");
-                document.getElementById("address-error").innerText = "";
+                addressError.innerText = "";
             } else {
-                document.getElementById("address-error").innerText = "Must have an space, a letter, and a number";
+                addressError.innerText = "Must have an space, a letter, and a number";
                 inputAddress.classList.remove("isOk");
             }
         }
@@ -222,7 +234,7 @@ window.onload = function () {
     }
 
     inputAddress.onfocus = function () {
-        document.getElementById("address-error").innerText = "";
+        addressError.innerText = "";
         inputAddress.classList.remove("isOk");
         inputAddress.classList.remove("notOk");
     }
@@ -231,13 +243,13 @@ window.onload = function () {
     /*-----------------validate location input-------------------------- */
     inputLocation.onblur = function () {
         if (inputLocation.value.length < 3) {
-            document.getElementById("location-error").innerText = "Must have 3 characters at least";
+            locationError.innerText = "Must have 3 characters at least";
         } else {
             if (hasLetters(inputLocation.value) && hasNumbers(inputLocation.value)) {
                 inputLocation.classList.add("isOk");
-                document.getElementById("location-error").innerText = "";
+                locationError.innerText = "";
             } else {
-                document.getElementById("location-error").innerText = "Must have a letter, and a number";
+                locationError.innerText = "Must have a letter, and a number";
                 inputLocation.classList.remove("isOk");
             }
         }
@@ -247,7 +259,7 @@ window.onload = function () {
     }
 
     inputLocation.onfocus = function () {
-        document.getElementById("location-error").innerText = "";
+        locationError.innerText = "";
         inputLocation.classList.remove("isOk");
         inputLocation.classList.remove("notOk");
     }
@@ -257,10 +269,10 @@ window.onload = function () {
     inputAreaCode.onblur = function () {
         if ((inputAreaCode.value.length == 4 || inputAreaCode.value.length == 5) && onlyNumbers(inputAreaCode.value)) {
             inputAreaCode.classList.add("isOk");
-            document.getElementById("area-code-error").innerText = "";
+            areaCodeError.innerText = "";
         } else {
             inputAreaCode.classList.remove("isOk");
-            document.getElementById("area-code-error").innerText = "Must have 4 o 5 characters, and only numbers";
+            areaCodeError.innerText = "Must have 4 o 5 characters, and only numbers";
         }
         if (inputAreaCode.value == "") {
             inputAreaCode.classList.add("notOk")
@@ -268,7 +280,7 @@ window.onload = function () {
     }
 
     inputAreaCode.onfocus = function () {
-        document.getElementById("area-code-error").innerText = "";
+        areaCodeError.innerText = "";
         inputAreaCode.classList.remove("isOk");
         inputAreaCode.classList.remove("notOk");
     }
@@ -279,17 +291,17 @@ window.onload = function () {
     inputEmail.onblur = function () {
         var isOk = regexEmail.test(inputEmail.value);
         if (isOk) {
-            document.getElementById("error-message-email").innerText = "";
+            errorMessageEmail.innerText = "";
             inputEmail.classList.remove("input-email");
             inputEmail.classList.add("isOk");
         } else {
             inputEmail.classList.remove("isOk");
             inputEmail.classList.add("notOk")
-            document.getElementById("error-message-email").innerText = "Invalid email, try again.";
+            errorMessageEmail.innerText = "Invalid email, try again.";
         }
     }
     inputEmail.onfocus = function () {
-        document.getElementById("error-message-email").innerText = "";
+        errorMessageEmail.innerText = "";
         inputEmail.classList.remove("notOk");
         inputEmail.classList.remove("isOk")
     }
@@ -299,10 +311,10 @@ window.onload = function () {
     inputPassword.onblur = function () {
         var passwordText = inputPassword.value;
         if (passwordText.length < 8) {
-            document.getElementById("error-message-password").innerText = "There must be 8 characters at least.";
+            errorMessagePassword.innerText = "There must be 8 characters at least.";
             inputPassword.classList.add("notOk")
         } else {
-            document.getElementById("error-message-password").innerText = "";
+            errorMessagePassword.innerText = "";
             inputPassword.classList.add("isOk");
         }
     }
@@ -310,7 +322,7 @@ window.onload = function () {
     inputPassword.onfocus = function () {
         inputPassword.classList.remove("isOk");
         inputPassword.classList.remove("notOk");
-        document.getElementById("error-message-password").innerText = "";
+        errorMessagePassword.innerText = "";
     }
     /*------------------------------------------------------------------- */
 
@@ -318,9 +330,9 @@ window.onload = function () {
     inputRepeatPassword.onblur = function () {
         if (inputPassword.value === inputRepeatPassword.value) {
             inputRepeatPassword.classList.add("isOk");
-            document.getElementById("error-message-rpt-pass").innerText = "";
+            repeatPasswordError.innerText = "";
         } else {
-            document.getElementById("error-message-rpt-pass").innerText = "Passwords do not match";
+            repeatPasswordError.innerText = "Passwords do not match";
             inputRepeatPassword.classList.add("notOk")
             inputRepeatPassword.classList.remove("isOk");
         }
@@ -330,32 +342,53 @@ window.onload = function () {
     }
 
     inputRepeatPassword.onfocus = function () {
-        document.getElementById("error-message-rpt-pass").innerText = "";
+        repeatPasswordError.innerText = "";
         inputRepeatPassword.classList.remove("isOk");
         inputRepeatPassword.classList.remove("notOk")
     }
     /*------------------------------------------------------------------- */
 
     /*--------------------------input birthday -------------------------- */
+
+    var today = Date();
+    var dateControl = document.querySelector("input[type=date]");
+    dateControl.onblur = function(){
+        var dateControlValue = Date.parse(dateControl.value);
+        if(dateControlValue <= Date.parse(today)) {
+            dateControl.classList.add("isOk");
+        }else {
+            dateControl.classList.add("notOk");
+            dobError.innerText = "The date must be before today";
+        }
+    }
+
+    dateControl.onfocus = function() {
+        dateControl.classList.remove("isOk");
+        dateControl.classList.remove("notOk");
+        dobError.innerText = "";
+    }
+    
+
+    /*------------------------------------------------------------------- */
     createAccountButton.addEventListener("submit", function (e) {
         e.preventDefault();
         var cont = 0;
         var form = document.getElementById('form-inputs');
-        var arr_inputs= {};
+        var obj_inputs= {};
         for (var element of form.elements) {
-            if (element.localName == "input" && (element.type =="text" || element.type == "password")) {
+            if (element.localName == "input" && (element.type =="text" || element.type == "password" || element.type == "date")) {
                 if (element.classList.contains("isOk")) {
                     cont = cont + 1;
                 }else{
-                    arr_inputs[element.id] = element.value;
+                    obj_inputs[element.id] = element.value;
                 }
             }
         }
-        if (cont == 10) {
+        if (cont == 11) {
             var name = inputName.value;
             var lastName = inputLastName.value;
             var dni = inputDNI.value;
-            var dob = fixFormatDate(document.getElementById("born-date").value);
+            var dob = fixFormatDate(inputDob.value);
             var phone = inputPhone.value;
             var address = inputAddress.value;
             var city = inputLocation.value;
@@ -371,7 +404,7 @@ window.onload = function () {
                         localStorage.setItem("name",name);
                         localStorage.setItem("lastName",lastName);
                         localStorage.setItem("dni",dni);
-                        localStorage.setItem("dob",dob);
+                        localStorage.setItem("dob",inputDob.value);
                         localStorage.setItem("phone",phone);
                         localStorage.setItem("address",address);
                         localStorage.setItem("city",city);
@@ -380,10 +413,13 @@ window.onload = function () {
                         localStorage.setItem("password",password);
                         localStorage.setItem("repeatPassword",repeatPassword);
                     } 
-                    alert(JSON.stringify(data))
+                    alert(JSON.stringify(data,undefined,2))
+                })
+                .catch(function(err){
+                    alert(JSON.stringify(err,undefined,2));
                 })
         } else {
-            alert("There are errors or some input was not completed!\n" + JSON.stringify(arr_inputs))
+            alert("There are errors or some input was not completed!\n" + JSON.stringify(obj_inputs,undefined,2))
         }
     })
 }
