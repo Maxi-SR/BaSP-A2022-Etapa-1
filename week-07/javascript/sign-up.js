@@ -72,8 +72,50 @@ function fixFormatDate(date) {
 }
 
 window.onload = function () {
-    /* ------------------name input validation------------------- */
+    
     var inputName = document.getElementById("first-name");
+    var inputLastName = document.getElementById("last-name");
+    var inputDNI = document.getElementById("dni");
+    var inputPhone = document.getElementById("phone-number");
+    var inputAddress = document.getElementById("input-address");
+    var inputLocation = document.getElementById("location");
+    var inputAreaCode = document.getElementById("area-code");
+    var inputEmail = document.getElementById("input-email");
+    var inputPassword = document.getElementById("password");
+    var inputRepeatPassword = document.getElementById("repeat-password");
+    var inputDob = fixFormatDate(document.getElementById("born-date").value);
+    var createAccountButton = document.getElementById("form-inputs");
+    /*-------------------set local storage items to form if exists---------*/
+    /*if the first item has a value then all items has too, cause I set items to local storage when
+        all inputs in the form are ok. Then, cause I send the request if all inputs has the class "isOk"
+        I must to set isOk class to all inputs*/
+    if (localStorage.getItem("name")){
+        inputName.value = localStorage.getItem("name");
+        inputName.classList.add("isOk")        
+        inputLastName.value = localStorage.getItem("lastName");
+        inputLastName.classList.add("isOk")
+        inputDNI.value  = localStorage.getItem("dni");
+        inputDNI.classList.add("isOk")
+        inputDob.value = localStorage.getItem("dob");
+        
+        inputPhone.value = localStorage.getItem("phone");
+        inputPhone.classList.add("isOk")
+        inputAddress.value = localStorage.getItem("address");
+        inputAddress.classList.add("isOk")
+        inputLocation.value = localStorage.getItem("city");
+        inputLocation.classList.add("isOk")
+        inputAreaCode.value = localStorage.getItem("zip");
+        inputAreaCode.classList.add("isOk")
+        inputEmail.value = localStorage.getItem("email");
+        inputEmail.classList.add("isOk")
+        inputPassword.value = localStorage.getItem("password");
+        inputPassword.classList.add("isOk")
+        inputRepeatPassword.value = localStorage.getItem("repeatPassword")
+        inputRepeatPassword.classList.add("isOk")
+    }
+    /*-------------------------------------------------------------------*/
+
+    /* ------------------name input validation------------------- */
     inputName.onblur = function () {
         var onlyLettersInString = onlyLetters(inputName.value);
         if (onlyLettersInString && inputName.value.length >= 3) {
@@ -94,7 +136,6 @@ window.onload = function () {
     /*-----------------------------------------------------------*/
 
     /* ------------------last name input validation------------------- */
-    var inputLastName = document.getElementById("last-name");
     inputLastName.onblur = function () {
         var onlyNumbersInString = onlyLetters(inputLastName.value);
         if (onlyNumbersInString && inputLastName.value.length >= 3) {
@@ -115,7 +156,6 @@ window.onload = function () {
     /*----------------------------------------------------------------- */
 
     /*------------------------DNI input validation---------------------- */
-    var inputDNI = document.getElementById("dni");
     inputDNI.onblur = function () {
         var onlyNumbersInString = onlyNumbers(inputDNI.value);
         if (onlyNumbersInString && (inputDNI.value.length == 7 || inputDNI.value.length == 8)) {
@@ -137,8 +177,6 @@ window.onload = function () {
     /*-----------------------------------------------------------------*/
 
     /*---------------- phone input validation ------------------------*/
-
-    var inputPhone = document.getElementById("phone-number");
     inputPhone.onblur = function () {
         if (inputPhone.value.length != 10) {
             document.getElementById("phone-error").innerText = "There must have 10 characters";
@@ -165,8 +203,6 @@ window.onload = function () {
     /*------------------------------------------------------------------*/
 
     /*----------------address input validation------------------------- */
-
-    var inputAddress = document.getElementById("input-address");
     inputAddress.onblur = function () {
         if (inputAddress.value.length < 5) {
             document.getElementById("address-error").innerText = "Must have 5 characters at least";
@@ -190,12 +226,9 @@ window.onload = function () {
         inputAddress.classList.remove("isOk");
         inputAddress.classList.remove("notOk");
     }
-
     /*----------------------------------------------------------------- */
 
     /*-----------------validate location input-------------------------- */
-
-    var inputLocation = document.getElementById("location");
     inputLocation.onblur = function () {
         if (inputLocation.value.length < 3) {
             document.getElementById("location-error").innerText = "Must have 3 characters at least";
@@ -221,7 +254,6 @@ window.onload = function () {
     /*------------------------------------------------------------------- */
 
     /*-----------------validate area code input-------------------------- */
-    var inputAreaCode = document.getElementById("area-code");
     inputAreaCode.onblur = function () {
         if ((inputAreaCode.value.length == 4 || inputAreaCode.value.length == 5) && onlyNumbers(inputAreaCode.value)) {
             inputAreaCode.classList.add("isOk");
@@ -240,13 +272,10 @@ window.onload = function () {
         inputAreaCode.classList.remove("isOk");
         inputAreaCode.classList.remove("notOk");
     }
-
     /*------------------------------------------------------------------- */
 
     /*-----------------validate email input-------------------------- */
-
     var regexEmail = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
-    var inputEmail = document.getElementById("input-email");
     inputEmail.onblur = function () {
         var isOk = regexEmail.test(inputEmail.value);
         if (isOk) {
@@ -264,12 +293,9 @@ window.onload = function () {
         inputEmail.classList.remove("notOk");
         inputEmail.classList.remove("isOk")
     }
-
     /*------------------------------------------------------------------- */
 
     /*-----------------validate password input-------------------------- */
-
-    var inputPassword = document.getElementById("password");
     inputPassword.onblur = function () {
         var passwordText = inputPassword.value;
         if (passwordText.length < 8) {
@@ -286,37 +312,31 @@ window.onload = function () {
         inputPassword.classList.remove("notOk");
         document.getElementById("error-message-password").innerText = "";
     }
-
     /*------------------------------------------------------------------- */
 
     /*-----------------validate repeat password input-------------------------- */
-
-    var repeatPassword = document.getElementById("repeat-password");
-    repeatPassword.onblur = function () {
-        if (inputPassword.value === repeatPassword.value) {
-            repeatPassword.classList.add("isOk");
+    inputRepeatPassword.onblur = function () {
+        if (inputPassword.value === inputRepeatPassword.value) {
+            inputRepeatPassword.classList.add("isOk");
             document.getElementById("error-message-rpt-pass").innerText = "";
         } else {
             document.getElementById("error-message-rpt-pass").innerText = "Passwords do not match";
-            repeatPassword.classList.add("notOk")
-            repeatPassword.classList.remove("isOk");
+            inputRepeatPassword.classList.add("notOk")
+            inputRepeatPassword.classList.remove("isOk");
         }
-        if (repeatPassword.value == "") {
-            repeatPassword.classList.add("notOk")
+        if (inputRepeatPassword.value == "") {
+            inputRepeatPassword.classList.add("notOk")
         }
     }
 
-    repeatPassword.onfocus = function () {
+    inputRepeatPassword.onfocus = function () {
         document.getElementById("error-message-rpt-pass").innerText = "";
-        repeatPassword.classList.remove("isOk");
-        repeatPassword.classList.remove("notOk")
+        inputRepeatPassword.classList.remove("isOk");
+        inputRepeatPassword.classList.remove("notOk")
     }
-
     /*------------------------------------------------------------------- */
 
     /*--------------------------input birthday -------------------------- */
-
-    var createAccountButton = document.getElementById("form-inputs");
     createAccountButton.addEventListener("submit", function (e) {
         e.preventDefault();
         var cont = 0;
@@ -342,10 +362,24 @@ window.onload = function () {
             var zip = inputAreaCode.value;
             var email = inputEmail.value;
             var password = inputPassword.value;
+            var repeatPassword = inputRepeatPassword.value;
             var url = "https://basp-m2022-api-rest-server.herokuapp.com/signup?name=" + name + "&lastName=" + lastName + "&dni=" + dni + "&dob=" + dob + "&phone=" + phone + "&address=" + address + "&city=" + city + "&zip=" + zip + "&email=" + email + "&password=" + password;
             fetch(url)
                 .then(response => response.json())
                 .then(data => {
+                    if (data.success){
+                        localStorage.setItem("name",name);
+                        localStorage.setItem("lastName",lastName);
+                        localStorage.setItem("dni",dni);
+                        localStorage.setItem("dob",dob);
+                        localStorage.setItem("phone",phone);
+                        localStorage.setItem("address",address);
+                        localStorage.setItem("city",city);
+                        localStorage.setItem("zip",zip);
+                        localStorage.setItem("email",email);
+                        localStorage.setItem("password",password);
+                        localStorage.setItem("repeatPassword",repeatPassword);
+                    } 
                     alert(JSON.stringify(data))
                 })
         } else {
