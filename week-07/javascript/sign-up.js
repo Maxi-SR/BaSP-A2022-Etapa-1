@@ -418,8 +418,6 @@ window.onload = function () {
                 .catch(function(err){
                     alert(JSON.stringify(err,undefined,2));
                 })
-        } else {
-            alert("There are errors or some input was not completed!\n" + JSON.stringify(obj_inputs,undefined,2))
-        }
+        } 
     })
 }
